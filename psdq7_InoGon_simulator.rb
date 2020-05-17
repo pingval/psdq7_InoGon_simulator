@@ -1,3 +1,5 @@
+$>.sync = true
+
 Lib_Dir = "./lib"
 RGSS3_Dir = "./lib/RGSS3"
 RGSS3_Require_Order = %w[
@@ -33,16 +35,12 @@ def log(str, timing)
 end
 
 # 結果
-$result = {
-  both: {},
-  win: {},
-  lose: {},
-}
+$result = {}
 
 # 結果を集計
 def tally_result(*keys)
   keys.each{|key|
-    h = $result[key]
+    h = $result[key] ||= {}
     h[:turn_count] ||= 0
     h[:turn_count] += $game_troop.turn_count
     party_leaf_count = 0
@@ -126,6 +124,8 @@ def puts_result(key, total)
 end
 
 def main
+  $result.clear
+  
   win = 0
   # ログを出力するなら勝手にN=1に変更
   if $option[:log_timing] != :none
@@ -140,6 +140,11 @@ def main
   $option[:N].times{
     $game_troop = troop_InoGon
     $game_party = $option[:party][seed_type: $option[:seed_type], mari_lv11: $option[:mari_lv11]]
+
+    # a, b, c = $game_party.actors
+    # c.inventory[:Leaf] = 0
+    # b.inventory[:Leaf] = 0
+    # a.hp = 0
 
     scene = Scene_Battle.new
     case scene.test
@@ -170,7 +175,7 @@ end
 $option = {
   N: 1000,
   log_timing: :none,
-  party: Party_Panda,
+  party: Party_Pingval,
   mari_lv11: false,
   seed_type: :rand,
 }

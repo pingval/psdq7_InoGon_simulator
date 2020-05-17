@@ -1,11 +1,6 @@
-# https://harapan.exblog.jp/15510551/
-# > 戦術はガ主マの順で
-# > 全快or1発分被ダメ時：防御、攻撃、石→ガ
-# > 2発分被ダメ時：防御、薬草or防御(自身に2発分)、石→誰か　回復は自分が被ダメしてる時は自分でする
-# > が基本。例外は、ガボor主人公は瀕死で防御しても耐えられない時のみ自身に薬草、
-# > 砂煙が主人公に入ったら切れるまで防御、蘇生はマリベルの葉から使用、マリベルの世界樹を使った場合は石先読みの対象を主人公に変更する、辺りか。
-# 実際はたぶんいろいろ違う
-class Game_Party_Panda < Game_Party
+# from https://github.com/pingval/DQ7/blob/master/pingval-psdq7-Aira183-chart.txt#L1649
+# 実際はいろいろ違う
+class Game_Party_Pingval < Game_Party
   def set_actions
     a, b, c = actors
 
@@ -35,7 +30,8 @@ class Game_Party_Panda < Game_Party
           damaged_actor2 = alive_actors.min_by{|actor| -actor.dmg }
           if damaged_actor2.dmg > 15 && b.has?(:Herb)
             b.set(:Herb, damaged_actor2)
-          elsif b.blind? || (!c.has?(:Leaf) && damaged_actor == b && damaged_actor_dmg > 0)
+          elsif ((b.blind? && damaged_actor == b && damaged_actor_dmg > 0) ||
+                 (!c.has?(:Leaf) && damaged_actor == b && damaged_actor_dmg > 0))
             b.set(:Guard)
           else
             b.set(:Boomerang)
@@ -62,12 +58,18 @@ class Game_Party_Panda < Game_Party
       end
 
     when [false,  true,  true]
-      if c.has?(:Leaf)
-        b.set(:Guard)
-        c.set(:Leaf, a)
-      elsif b.has?(:Leaf)
+      # if c.has?(:Leaf)
+      #   b.set(:Guard)
+      #   c.set(:Leaf, a)
+      # elsif b.has?(:Leaf)
+      #   b.set(:Leaf, a)
+      #   c.set(:Herb, b)
+      if b.has?(:Leaf) && b.safe?
         b.set(:Leaf, a)
         c.set(:Herb, b)
+      elsif c.has?(:Leaf)
+        b.set(:Guard)
+        c.set(:Leaf, a)
       else
         damaged_actor = alive_actors.min_by{|actor| -actor.dmg }
         if damaged_actor.dmg > 30
@@ -130,8 +132,6 @@ class Game_Party_Panda < Game_Party
         if b.safe?
           if a.dmg > 15 && b.has?(:Herb)
             b.set(:Herb, a)
-          elsif b.blind?
-            b.set(:Guard)
           else
             b.set(:Boomerang)
           end
@@ -176,61 +176,10 @@ class Game_Party_Panda < Game_Party
   end
 end
 
-def hero_Panda(seed_type: :rand)
-  Game_Actor.new(
-    name: "主",
-    status: Actor_Status[:Hero_lv10],
-    seed_type: seed_type,
-
-    equipments: {
-      atk: 26 + 1,
-      def: 28 + 13 + 8,
-      agi: 0,
-      eva: 0,
-    },
-    seeds: { mhp: 2, mmp: 0, atk: 6, def: 2, agi: 0, },
-    inventory: { Herb: 7, Leaf: 1 },
-  )
-end
-
-def mari_Panda(seed_type: :rand, mari_lv11: false)
-  Game_Actor.new(
-    name: "マ",
-    status: Actor_Status[mari_lv11 ? :Mari_lv11 : :Mari_lv10],
-    seed_type: seed_type,
-
-    equipments: {
-      atk: 23,
-      def: 28 + 15 + 15 + 5,
-      agi: 0,
-      eva: 1r/6,
-    },
-    seeds: { mhp: 2, mmp: 1, atk: 0, def: 3, agi: 0, },
-    inventory: { Herb: 1.0/0, Leaf: 1 },
-  )
-end
-
-def gabo_Panda(seed_type: :rand)
-  Game_Actor.new(
-    name: "ガ",
-    status: Actor_Status[:Gabo_lv5],
-    seed_type: seed_type,
-
-    equipments: {
-      atk: 21,
-      def: 18 + 9 + 5,
-      agi: 0,
-      eva: 0,
-    },
-    seeds: { mhp: 0, mmp: 2, atk: 0, def: 0, agi: 4, },
-    inventory: { Herb: 3, Leaf: 0 },
-  )
-end
-
-Party_Panda = ->seed_type: :rand, mari_lv11: false{
+Party_Pingval = ->seed_type: :rand, mari_lv11: false{
   hero = hero_Panda(seed_type: seed_type)
   mari = mari_Panda(seed_type: seed_type, mari_lv11: mari_lv11)
   gabo = gabo_Panda(seed_type: seed_type)
 
-  Game_Party_Panda.new(gabo, hero, mari, npc_Kasim)
+  Game_Party_Pingval.new(gabo, hero, mari, npc_Kasim)
 }

@@ -1,3 +1,4 @@
+# from https://github.com/pingval/DQ7/blob/master/psdq7_atk.rb
 def calc_damage(atk:0, df:0, guard:0, charge:0, twin:false, killer:false, order:1, special:nil, rand_type: :rand, **kwrest)
   rnd = ->range {
     case rand_type
@@ -306,7 +307,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
 
-  # ブーメランは0 カシムの「斬りつける」には会心判定なし
+  # ブーメラン・カシムの「斬りつける」には会心判定なし
   def item_cri(user, item)
     if !user.enemy? && item == :Attack
       1r/64

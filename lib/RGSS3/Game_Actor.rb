@@ -198,16 +198,20 @@ class Game_Actor < Game_Battler
   # ゴンズの攻撃の最低乱数ではなく、イノップの攻撃(≒ゴンズの強打撃)の最低乱数にする？？
   # 攻撃されたら防御しても死ぬ
   def dying?
+    # hp <= current_fury_min / 2
+    # hp <= ino_fury_min / 2
     # hp <= gon_attack_min / 2
-    # hp <= ino_attack_min / 2
-    hp <= current_attack_min / 2
+    hp <= ino_attack_min / 2
+    # hp <= current_attack_min / 2
   end
 
   # 攻撃されたら防御しないと死ぬ
   def danger?
-    # hp <= gon_attack_min / 2
-    # hp <= ino_attack_min
-    hp <= current_attack_min
+    # hp <= current_fury_min
+    # hp <= ino_fury_min
+    # hp <= gon_attack_min
+    hp <= ino_attack_min
+    # hp <= current_attack_min
   end
 
   # HPまんたん
