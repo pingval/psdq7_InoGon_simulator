@@ -131,6 +131,12 @@ def main
   if $option[:log_timing] != :none
     $option[:N] = 1
   end
+
+  # オプション
+  puts "N = #{$option[:N]}"
+  puts "Maribel's Level = #{$option[:mari_lv11] ? 11 : 10}"
+  puts
+
   $option[:N].times{
     $game_troop = troop_InoGon
     $game_party = $option[:party][seed_type: $option[:seed_type], mari_lv11: $option[:mari_lv11]]
@@ -148,9 +154,6 @@ def main
 
   # 結果
   return if $option[:N] == 1
-  puts "N = #{$option[:N]}"
-  puts "Maribel's Level = #{$option[:mari_lv11] ? 11 : 10}"
-  puts
   puts "Win rate:\t%.2f%%" % [win.fdiv($option[:N]) * 100]
   puts_result(:win, win)
   puts
