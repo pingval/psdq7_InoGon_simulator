@@ -166,7 +166,7 @@ end
 # log_timing: none, battle, turn, action, result
 $option = {
   N: 1000,
-  log_timing: :turn,
+  log_timing: :none,
   party: Party_Panda,
   mari_lv11: false,
   seed_type: :rand,
