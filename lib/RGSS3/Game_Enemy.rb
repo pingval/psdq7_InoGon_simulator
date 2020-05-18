@@ -1,7 +1,7 @@
 class Game_Enemy < Game_Battler
   attr_reader   :index                    # 敵グループ内インデックス
 
-  def initialize(index: 0, name: "", status: {}, action: {})
+  def initialize(index: 0, name: "", status: {}, action: {}, heal: nil)
     super
     @index = index
     @name = name
@@ -15,6 +15,8 @@ class Game_Enemy < Game_Battler
     @action_list = action[:list]
     @action_times = action[:times]
     @action_pattern = action[:pattern]
+
+    @heal_range_on_turn_end = heal
 
     @hp = mhp
     @mp = mmp

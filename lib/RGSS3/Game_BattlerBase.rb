@@ -89,4 +89,12 @@ class Game_BattlerBase
   def pay_skill_cost(skill)
     # self.mp -= skill.mp_cost
   end
+
+  def hp=(a)
+    @hp = a.clamp(0, @mhp)
+  end
+
+  def mp=(a)
+    @mp = a.clamp(0, @mmp)
+  end
 end

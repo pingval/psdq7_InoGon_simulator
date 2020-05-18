@@ -121,6 +121,7 @@ class Game_Battler < Game_BattlerBase
   attr_reader   :speed                    # 行動速度
   attr_reader   :result                   # 行動結果（対象側）
   attr_reader   :action_count             # 行動した回数
+  attr_reader   :heal_range_on_turn_end
 
   def initialize(**rest)
     @name = ""
@@ -128,6 +129,7 @@ class Game_Battler < Game_BattlerBase
     @speed = 0
     @action_count = 0
     @result = Game_ActionResult.new(self)
+    @heal_range_on_turn_end = nil
     super
   end
 
@@ -350,6 +352,9 @@ class Game_Battler < Game_BattlerBase
   def on_turn_end
     @result.clear
     remove_states_auto(:turn)
+    if !@heal_range_on_turn_end.nil?
+      self.hp += rand(@heal_range_on_turn_end)
+    end
   end
 
   def to_s

@@ -74,6 +74,7 @@ def npc_Kasim
       list: %i[Attack Watch Slash Attack Slash Watch],
       times: 1,
       pattern: :rot1,
-    }
+    },
+    heal: 90..110,
   )
 end
