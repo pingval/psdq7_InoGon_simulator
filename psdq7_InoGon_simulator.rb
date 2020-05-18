@@ -34,6 +34,50 @@ def log(str, timing)
   puts pre + str
 end
 
+Label_Width = 30
+def f(depth, label, datas = [])
+  l = label.ljust(Label_Width - depth * 2)
+  r = datas.map{|s| "%10s"%s } * ""
+  puts ("  " * depth + l + r).rstrip
+end
+
+# パーティを出力
+def puts_party(party)
+  puts "* Party"
+
+  actors = party.actors
+  f(1, "", (1..actors.size).map{|i| "No.#{i}" })
+  f(1, "Status")
+  f(2, "Max HP", actors.map{|a| a.mhp })
+  f(2, "Max MP", actors.map{|a| a.mmp })
+  f(2, "Atk", actors.map{|a| a.atk })
+  f(2, "Def", actors.map{|a| a.def })
+  f(2, "Agi", actors.map{|a| a.agi })
+  f(2, "Eva", actors.map{|a| "%.2f%%"%[a.eva*100] })
+
+  f(1, "Item")
+  f(2, "Herb", actors.map{|a| a.inventory[:Herb] })
+  f(2, "Leaf", actors.map{|a| a.inventory[:Leaf] })
+
+  g = ->pre{
+    actors.map{|a|
+      l = a.send(pre + "_min")
+      r = a.send(pre + "_max")
+      "%s%2d..%s%2d"%[l < a.mhp ? "" : "*", l, r < a.mhp ? "" : "*", r]
+    }
+  }
+  f(1, "Damage Range")
+  f(2, "Inopp")
+  f(3, "Attack", g["ino_attack"])
+  f(3, "Fury", g["ino_fury"])
+  f(3, "BrutalHit", g["ino_brut"])
+  f(2, "Gonz")
+  f(3, "Attack", g["gon_attack"])
+  f(3, "Tail/Claw", g["gon_fury"])
+  f(3, "BrutalHit", g["gon_brut"])
+  puts
+end
+
 # 結果
 $result = {}
 
@@ -68,101 +112,52 @@ end
 
 # 結果を出力
 def puts_result(key, total)
-  label_width = 30
-  def h(depth, s)
-    puts ("  " * depth) + s
+  def f(depth, label, datas = [])
+    l = label.ljust(Label_Width - depth * 2)
+    r = datas.map{|s| "%10s"%s } * ""
+    puts ("  " * depth + l + r).rstrip
   end
 
   h = $result[key]
-  h(0, "* " + key.to_s.capitalize)
-  h(1, "Ave. turn count: %.2f" % [h[:turn_count].fdiv(total)])
-  h(1, "Party:")
-  h(2, (" " * label_width) + h[:party].keys.map{|i|
-    "No.#{i + 1}".rjust(10)
-  } * "")
+  f(0, "* " + key.to_s.capitalize)
+  f(1, "Ave. turn count: %.2f" % [h[:turn_count].fdiv(total)])
+  f(1, "Party:")
+  f(2, "", h[:party].keys.map{|i| "No.#{i}" })
   tbl = {
     dead: "Death rate on battle end",
     hp: "Ave. HP on battle end",
     herb_count: "Ave. Herb count",
     leaf_count: "Ave. Leaf count",
   }
-  tbl.each{|key, label|
-    h(2, label.ljust(label_width) + h[:party].size.times.map{|i|
-      if key == :dead
-        "%9.2f%%"%[h[:party][i][key].fdiv(total) * 100]
-      else
-        "%10.2f"%h[:party][i][key].fdiv(total)
-      end
-    } * "")
-  }
+  f(2, "Death rate on battle end", h[:party].size.times.map{|i|
+    "%.2f%%"%[h[:party][i][:dead].fdiv(total) * 100]
+  })
+  f(2, "Ave. HP on battle end", h[:party].size.times.map{|i|
+    "%.2f"%h[:party][i][:hp].fdiv(total)
+  })
+  f(2, "Ave. Herb count", h[:party].size.times.map{|i|
+    "%.2f"%h[:party][i][:herb_count].fdiv(total)
+  })
+  f(2, "Ave. Leaf count", h[:party].size.times.map{|i|
+    "%.2f"%h[:party][i][:leaf_count].fdiv(total)
+  })
 
-  h(1, "Distribution of Leaf count:")
+  f(1, "Distribution of Leaf count:")
   leaf_distribution_sum = 0
   h[:leaf_distribution].sort.each{|leaf_count, n|
-    h(2, "%5d%9.2f%%"%[leaf_count, n.fdiv(total) * 100])
+    f(2, "%5d%9.2f%%"%[leaf_count, n.fdiv(total) * 100])
     leaf_distribution_sum += leaf_count * n
   }
-  h(2, "Ave. %10.2f"%[leaf_distribution_sum.fdiv(total)])
+  f(2, "Ave. %10.2f"%[leaf_distribution_sum.fdiv(total)])
 
-  h(1, "Troop:")
-  h(2, (" " * label_width) + h[:troop].keys.map{|i|
-    "No.#{i + 1}".rjust(10)
-  } * "")
-  tbl = {
-    dead: "Death rate on battle end",
-    hp: "Ave. HP on battle end",
-  }
-  tbl.each{|key, label|
-    h(2, label.ljust(label_width) + h[:troop].size.times.map{|i|
-      if key == :dead
-        "%9.2f%%"%[h[:troop][i][key].fdiv(total) * 100]
-      else
-        "%10.2f"%h[:troop][i][key].fdiv(total)
-      end
-    } * "")
-  }
-  puts
-end
-
-def puts_party(party)
-  puts "* Party"
-  label_width = 34
-  def h(depth, label, datas = [])
-    l = label.ljust(34 - depth * 2)
-    r = datas.map{|s| "%10s"%s } * ""
-    puts ("  " * depth + l + r).rstrip
-  end
-
-  actors = party.actors
-  h(1, "", (1..actors.size).map{|i| "No.#{i}" })
-  h(1, "Status")
-  h(2, "Max HP", actors.map{|a| a.mhp })
-  h(2, "Max MP", actors.map{|a| a.mmp })
-  h(2, "Atk", actors.map{|a| a.atk })
-  h(2, "Def", actors.map{|a| a.def })
-  h(2, "Agi", actors.map{|a| a.agi })
-  h(2, "Eva", actors.map{|a| "%.2f%%"%[a.eva*100] })
-
-  h(1, "Item")
-  h(2, "Herb", actors.map{|a| a.inventory[:Herb] })
-  h(2, "Leaf", actors.map{|a| a.inventory[:Leaf] })
-
-  f = ->pre{
-    actors.map{|a|
-      l = a.send(pre + "_min")
-      r = a.send(pre + "_max")
-      "%s%2d..%s%2d"%[l < a.mhp ? "" : "*", l, r < a.mhp ? "" : "*", r]
-    }
-  }
-  h(1, "Damage Range")
-  h(2, "Inopp")
-  h(3, "Attack", f["ino_attack"])
-  h(3, "Fury", f["ino_fury"])
-  h(3, "BrutalHit", f["ino_brut"])
-  h(2, "Gonz")
-  h(3, "Attack", f["gon_attack"])
-  h(3, "Tail/Claw", f["gon_fury"])
-  h(3, "BrutalHit", f["gon_brut"])
+  f(1, "Troop:")
+  f(2, "", h[:troop].keys.map{|i| "No.#{i}" })
+  f(2, "Death rate on battle end", h[:troop].size.times.map{|i|
+    "%.2f%%"%[h[:troop][i][:dead].fdiv(total) * 100]
+  })
+  f(2, "Ave. HP on battle end", h[:troop].size.times.map{|i|
+    "%.2f"%h[:troop][i][:hp].fdiv(total)
+  })
   puts
 end
 
@@ -183,14 +178,14 @@ def main
     $game_troop = troop_InoGon
     $game_party = $option[:party][seed_type: $option[:seed_type], mari_lv11: $option[:mari_lv11]]
     if i == 0
-      party = if $option[:N] == 1
+      tmp_party = if $option[:N] == 1
         $game_party
       else
         # 種の上昇値(seed_type)がminでもmaxでもなければ、ave(平均値)として出力。
         st = :ave if !%i[min max].include?($option[:seed_type])
         $option[:party][seed_type: st, mari_lv11: $option[:mari_lv11]]
       end
-      puts_party(party)
+      puts_party(tmp_party)
     end
 
     # a, b, c = $game_party.actors
