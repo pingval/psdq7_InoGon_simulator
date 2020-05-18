@@ -171,8 +171,13 @@ def main
   end
 
   # オプション
-  puts "N = #{$option[:N]}"
-  puts "Maribel's Level = #{$option[:mari_lv11] ? 11 : 10}"
+  puts "N: #{$option[:N]}"
+  puts "Log Timing: %s" % [$option[:log_timing]]
+  puts
+  puts "Party: %s" % [$option[:party]]
+  puts "Maribel's Level: %2d" % [$option[:mari_lv11] ? 11 : 10]
+  puts "Seed Type: %s" % [$option[:seed_type]]
+  puts
 
   $option[:N].times{|i|
     $game_troop = troop_InoGon
@@ -220,7 +225,7 @@ end
 $option = {
   N: 1000,
   log_timing: :none,
-  party: Party_Pingval,
+  party: Party_Panda,
   mari_lv11: false,
   seed_type: :rand,
 }

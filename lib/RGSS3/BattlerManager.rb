@@ -42,7 +42,7 @@ module BattleManager
     @phase = nil
     $game_party.on_battle_end
     $game_troop.on_battle_end
-    log("%-7s%s"%[result.capitalize, + $game_troop.to_s + " | " + $game_party.to_s], :battle)
+    log("%4s!: %s" % [result.capitalize, self.to_s], :battle)
     result
   end
 
@@ -58,7 +58,7 @@ module BattleManager
   def self.turn_start
     @phase = :turn
     $game_troop.increase_turn
-    log("%2dT: "%$game_troop.turn_count + $game_troop.to_s + " | " + $game_party.to_s, :turn)
+    log("%2dT: %s" % [$game_troop.turn_count, self.to_s], :turn)
     make_action_orders
   end
 
@@ -90,5 +90,9 @@ module BattleManager
       next unless battler.index && battler.alive?
       return battler
     end
+  end
+
+  def self.to_s
+    "%s | %s" % [$game_troop.to_s, $game_party.to_s]
   end
 end

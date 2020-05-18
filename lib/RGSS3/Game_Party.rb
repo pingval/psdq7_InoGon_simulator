@@ -141,15 +141,34 @@ class Game_Party < Game_Unit
 
     set_actions
 
+    # 設定した行動のチェック
     alive_actors.each{|actor|
       item = actor.current_action.item
-      if (item == :Herb || item == :Leaf) && actor.inventory[item] < 1
-        raise "%s doesn't have %s." % [actor.name, item]
+      begin
+        # 行動が設定されていない
+        if actor.current_action.item.nil?
+          raise "%s's action is not set." % [actor.name]
+        end
+        # 使用予定のアイテムを所持していない
+        if (item == :Herb || item == :Leaf) && actor.inventory[item] < 1
+          raise "%s doesn't have %s." % [actor.name, item]
+        end
+        # 死者に対する薬草
+        if item == :Herb && actor.current_action.targets[0].dead?
+          raise "%s's Herb to dead actor." % [actor.name]
+        end
+        # 生存者に対する葉っぱ(先読み葉っぱの可能性を考えていない)
+        if item == :Leaf && actor.current_action.targets[0].alive?
+          raise "%s's Leaf to alive actor." % [actor.name]
+        end
+      rescue => e
+        log(BattleManager.to_s, :none)
+        raise e
       end
     }
   end
 
-    def to_s
+  def to_s
     members.map(&:to_s) * " | "
   end
 end
