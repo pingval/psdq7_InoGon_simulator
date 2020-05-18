@@ -67,7 +67,7 @@ def puts_party(party)
       "%s%2d..%s%2d"%[l < a.mhp ? "" : "*", l, r < a.mhp ? "" : "*", r]
     }
   }
-  f(1, "Damage Range")
+  f(1, "Damage Range", [], "被ダメージ範囲(\"*\"つきは最大HPでも耐えない)")
   f(2, "Inopp")
   f(3, "Attack", g["ino_attack"], "攻撃")
   f(3, "Fury", g["ino_fury"], "武器を振り回す")
@@ -77,6 +77,27 @@ def puts_party(party)
   f(3, "Tail/Claw", g["gon_fury"], "尻尾/爪できりさく")
   f(3, "BrutalHit", g["gon_brut"])
   puts
+end
+
+# アイテムを出力
+def puts_inventory(party)
+  actors = party.actors
+
+  f(1, "", (1..actors.size).map{|i| "No.#{i}" })
+  f(1, "Item")
+  f(2, "Herb", actors.map{|a|
+    next a.inventory[:Herb] if a.inventory[:Herb] > 100
+    first = a.first_inventory[:Herb]
+    last = a.inventory[:Herb]
+    diff = first - last
+    "(%d-%d=)%d" % [first, diff, last]
+  }, "薬草")
+  f(2, "Leaf", actors.map{|a|
+    first = a.first_inventory[:Leaf]
+    last = a.inventory[:Leaf]
+    diff = first - last
+    "(%d-%d=)%d" % [first, diff, last]
+  }, "世界樹の葉")
 end
 
 # 結果
@@ -169,7 +190,9 @@ def main
   puts "N: #{$option[:N]}"
   puts "Log Timing: %s" % [$option[:log_timing]]
   puts
-  puts "Party: %s" % [$option[:party]]
+  # パスは消しとこう
+  party_s = $option[:party].to_s.sub(/ .*\//, " ")
+  puts "Party: %s" % [party_s]
   puts "Maribel's Level: %2d" % [$option[:mari_lv11] ? 11 : 10]
   puts "Seed Type: %s" % [$option[:seed_type]]
   puts
@@ -205,11 +228,15 @@ def main
   }
 
   # 結果
-  return if $option[:N] == 1
-  puts "Win rate:\t%.2f%%" % [win.fdiv($option[:N]) * 100]
-  puts_result(:win, win)
-  puts_result(:lose, $option[:N] - win)
-  puts_result(:both, $option[:N])
+  if $option[:N] == 1
+    puts
+    puts_inventory($game_party)
+  else
+    puts "Win rate:\t%.2f%%" % [win.fdiv($option[:N]) * 100]
+    puts_result(:win, win)
+    puts_result(:lose, $option[:N] - win)
+    puts_result(:both, $option[:N])
+  end
 end
 
 # if ARGV.size < 1
