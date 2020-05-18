@@ -200,10 +200,10 @@ def main
 
     scene = Scene_Battle.new
     case scene.test
-    when :victory
+    when :win
       tally_result(:win)
       win += 1
-    when :defeat
+    when :lose
       tally_result(:lose)
     end
     tally_result(:both)

@@ -31,24 +31,25 @@ module BattleManager
   end
 
   def self.process_victory
-    battle_end(:victory)
+    battle_end(:win)
   end
 
   def self.process_defeat
-    battle_end(:defeat)
+    battle_end(:lose)
   end
 
   def self.battle_end(result)
     @phase = nil
     $game_party.on_battle_end
     $game_troop.on_battle_end
-    log("%-7s"%result + $game_troop.to_s + " | " + $game_party.to_s, :battle)
+    log("%-7s%s"%[result.capitalize, + $game_troop.to_s + " | " + $game_party.to_s], :battle)
     result
   end
 
   def self.input_start
     if @phase != :input
       @phase = :input
+      make_speed
       $game_party.make_actions
       $game_troop.make_actions
     end
@@ -65,15 +66,23 @@ module BattleManager
     @phase = :turn_end
   end
 
-  def self.make_action_orders
+  def self.make_speed
     @action_battlers = []
     @action_battlers += $game_party.members
     @action_battlers += $game_troop.members
     @action_battlers.each {|battler| battler.make_speed }
-    # 順序を保存
-    @action_battlers.sort_by!.with_index{|a, i| [-a.speed, i] }
   end
 
+  def self.make_action_orders
+    @action_battlers.each{|a|
+      action_speed = a.actions.map{|action| action.speed }.min || 0
+      a.speed += action_speed
+    }
+    # 順序を保存
+    @action_battlers.sort_by!.with_index{|a, i| [-a.speed, i] }
+    # p @action_battlers.map(&:speed)
+  end
+  
   def self.next_subject
     loop do
       battler = @action_battlers.shift

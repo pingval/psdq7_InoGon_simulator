@@ -118,7 +118,7 @@ class Game_Battler < Game_BattlerBase
   attr_reader   :name
   attr_reader   :action_times             # 行動回数
   attr_reader   :actions                  # 戦闘行動（行動側）
-  attr_reader   :speed                    # 行動速度
+  attr_accessor :speed                    # 行動速度
   attr_reader   :result                   # 行動結果（対象側）
   attr_reader   :action_count             # 行動した回数
   attr_reader   :heal_range_on_turn_end
@@ -211,8 +211,8 @@ class Game_Battler < Game_BattlerBase
 
   # こんな感じ？
   def make_speed
-    base_speed_range = [1, agi].max * 32 .. [1, agi].max * 64
-    @speed = rand(base_speed_range) + (@actions.map{|action| action.speed }.min || 0)
+    speed_range = [1, agi].max * 32 .. [1, agi].max * 64
+    @speed = rand(speed_range)
   end
 
   def current_action
