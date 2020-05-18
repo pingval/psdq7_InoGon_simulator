@@ -161,7 +161,7 @@ def puts_party(party)
   h(3, "BrutalHit", f["ino_brut"])
   h(2, "Gonz")
   h(3, "Attack", f["gon_attack"])
-  h(3, "Fury", f["gon_fury"])
+  h(3, "Tail/Claw", f["gon_fury"])
   h(3, "BrutalHit", f["gon_brut"])
   puts
 end
