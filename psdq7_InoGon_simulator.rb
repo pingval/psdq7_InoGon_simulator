@@ -121,6 +121,49 @@ def puts_result(key, total)
       end
     } * "")
   }
+  puts
+end
+
+def puts_party(party)
+  puts "* Party"
+  label_width = 34
+  def h(depth, label, datas = [])
+    l = label.ljust(34 - depth * 2)
+    r = datas.map{|s| "%10s"%s } * ""
+    puts ("  " * depth + l + r).rstrip
+  end
+
+  actors = party.actors
+  h(1, "", (1..actors.size).map{|i| "No.#{i}" })
+  h(1, "Status")
+  h(2, "Max HP", actors.map{|a| a.mhp })
+  h(2, "Max MP", actors.map{|a| a.mmp })
+  h(2, "Atk", actors.map{|a| a.atk })
+  h(2, "Def", actors.map{|a| a.def })
+  h(2, "Agi", actors.map{|a| a.agi })
+  h(2, "Eva", actors.map{|a| "%.2f%%"%[a.eva*100] })
+
+  h(1, "Item")
+  h(2, "Herb", actors.map{|a| a.inventory[:Herb] })
+  h(2, "Leaf", actors.map{|a| a.inventory[:Leaf] })
+
+  f = ->pre{
+    actors.map{|a|
+      l = a.send(pre + "_min")
+      r = a.send(pre + "_max")
+      "%s%2d..%s%2d"%[l < a.mhp ? "" : "*", l, r < a.mhp ? "" : "*", r]
+    }
+  }
+  h(1, "Damage Range")
+  h(2, "Inopp")
+  h(3, "Attack", f["ino_attack"])
+  h(3, "Fury", f["ino_fury"])
+  h(3, "BrutalHit", f["ino_brut"])
+  h(2, "Gonz")
+  h(3, "Attack", f["gon_attack"])
+  h(3, "Fury", f["gon_fury"])
+  h(3, "BrutalHit", f["gon_brut"])
+  puts
 end
 
 def main
@@ -135,11 +178,20 @@ def main
   # オプション
   puts "N = #{$option[:N]}"
   puts "Maribel's Level = #{$option[:mari_lv11] ? 11 : 10}"
-  puts
 
-  $option[:N].times{
+  $option[:N].times{|i|
     $game_troop = troop_InoGon
     $game_party = $option[:party][seed_type: $option[:seed_type], mari_lv11: $option[:mari_lv11]]
+    if i == 0
+      party = if $option[:N] == 1
+        $game_party
+      else
+        # 種の上昇値(seed_type)がminでもmaxでもなければ、ave(平均値)として出力。
+        st = :ave if !%i[min max].include?($option[:seed_type])
+        $option[:party][seed_type: st, mari_lv11: $option[:mari_lv11]]
+      end
+      puts_party(party)
+    end
 
     # a, b, c = $game_party.actors
     # c.inventory[:Leaf] = 0
@@ -161,9 +213,7 @@ def main
   return if $option[:N] == 1
   puts "Win rate:\t%.2f%%" % [win.fdiv($option[:N]) * 100]
   puts_result(:win, win)
-  puts
   puts_result(:lose, $option[:N] - win)
-  puts
   puts_result(:both, $option[:N])
 end
 
