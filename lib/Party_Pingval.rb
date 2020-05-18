@@ -1,5 +1,9 @@
+# - パンダ戦術との違い:
+# 　- ガ主マ生存・ガ主生存の場合、主がマヌーサでもまんたんなら殴る
+# 　- ガが死んでいるときに、主がまんたんなら主の葉を優先的に使う
 # from https://github.com/pingval/DQ7/blob/master/pingval-psdq7-Aira183-chart.txt#L1649
 # 実際はいろいろ違う
+# ガボが死んだとき、主の葉はあるがマの葉がないときは？
 class Game_Party_Pingval < Game_Party
   def set_actions
     a, b, c = actors
@@ -10,7 +14,7 @@ class Game_Party_Pingval < Game_Party
     case [a.alive?, b.alive?, c.alive?]
     when [ true,  true,  true]
       # 3番目
-      damaged_actor = alive_actors.min_by{|actor| -actor.dmg }
+      damaged_actor = alive_actors.max_by{|actor| actor.dmg }
       if damaged_actor.dmg > 10
         c.set(:Herb, damaged_actor)
       elsif !c.has?(:Leaf)
@@ -27,7 +31,7 @@ class Game_Party_Pingval < Game_Party
         begin
           # 一時的に回復して2人目の回復対象を選択
           damaged_actor.hp += 35
-          damaged_actor2 = alive_actors.min_by{|actor| -actor.dmg }
+          damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
           if damaged_actor2.dmg > 15 && b.has?(:Herb)
             b.set(:Herb, damaged_actor2)
           elsif ((b.blind? && damaged_actor == b && damaged_actor_dmg > 0) ||
@@ -71,7 +75,7 @@ class Game_Party_Pingval < Game_Party
         b.set(:Guard)
         c.set(:Leaf, a)
       else
-        damaged_actor = alive_actors.min_by{|actor| -actor.dmg }
+        damaged_actor = alive_actors.max_by{|actor| actor.dmg }
         if damaged_actor.dmg > 30
           c.set(:Herb, damaged_actor)
         else
@@ -86,7 +90,7 @@ class Game_Party_Pingval < Game_Party
           begin
             # 一時的に回復して2人目の回復対象を選択
             damaged_actor.hp += 35
-            damaged_actor2 = alive_actors.min_by{|actor| -actor.dmg }
+            damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
             if damaged_actor2.dmg > 15 && b.has?(:Herb)
               b.set(:Herb, damaged_actor2)
             elsif b.blind? || (!c.has?(:Leaf) && damaged_actor == b && damaged_actor_dmg > 0)
