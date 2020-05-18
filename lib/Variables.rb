@@ -32,7 +32,7 @@ Actor_Status = {
   Hero_lv10: { mhp: 74, mmp: 29, atk: 28, def: 11, agi: 18, eva: 1r/64, },
   Mari_lv10: { mhp: 50, mmp: 35, atk: 13, def: 10, agi: 30, eva: 1r/64, },
   Mari_lv11: { mhp: 60, mmp: 41, atk: 14, def: 11, agi: 33, eva: 1r/64, },
-  Gabo_lv5: { mhp: 59, mmp: 0, atk: 26, def: 13, agi: 38, eva: 1r/64, },
+  Gabo_lv4: { mhp: 59, mmp: 0, atk: 26, def: 13, agi: 38, eva: 1r/64, },
 }
 
 def enemy_Inopp

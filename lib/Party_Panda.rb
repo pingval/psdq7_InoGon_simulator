@@ -213,7 +213,7 @@ end
 def gabo_Panda(seed_type: :rand)
   Game_Actor.new(
     name: "ガ",
-    status: Actor_Status[:Gabo_lv5],
+    status: Actor_Status[:Gabo_lv4],
     seed_type: seed_type,
 
     equipments: {
