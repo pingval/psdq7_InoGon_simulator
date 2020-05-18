@@ -31,7 +31,7 @@ class Game_Party_Panda < Game_Party
         damaged_actor_dmg = damaged_actor.dmg
         begin
           # 一時的に回復して2人目の回復対象を選択
-          damaged_actor.hp = (damaged_actor.hp + 35).clamp(0, damaged_actor.mhp)
+          damaged_actor.hp += 35
           damaged_actor2 = alive_actors.min_by{|actor| -actor.dmg }
           if damaged_actor2.dmg > 15 && b.has?(:Herb)
             b.set(:Herb, damaged_actor2)
@@ -83,7 +83,7 @@ class Game_Party_Panda < Game_Party
           damaged_actor_dmg = damaged_actor.dmg
           begin
             # 一時的に回復して2人目の回復対象を選択
-            damaged_actor.hp = (damaged_actor.hp + 35).clamp(0, damaged_actor.mhp)
+            damaged_actor.hp += 35
             damaged_actor2 = alive_actors.min_by{|actor| -actor.dmg }
             if damaged_actor2.dmg > 15 && b.has?(:Herb)
               b.set(:Herb, damaged_actor2)

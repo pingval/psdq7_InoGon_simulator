@@ -225,7 +225,7 @@ end
 $option = {
   N: 1000,
   log_timing: :none,
-  party: Party_Panda,
+  party: Party_Pingval,
   mari_lv11: false,
   seed_type: :rand,
 }
