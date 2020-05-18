@@ -35,10 +35,11 @@ def log(str, timing)
 end
 
 Label_Width = 30
-def f(depth, label, datas = [])
+def f(depth, label, datas = [], comment = "")
   l = label.ljust(Label_Width - depth * 2)
   r = datas.map{|s| "%10s"%s } * ""
-  puts ("  " * depth + l + r).rstrip
+  comment = " ; " + comment if !comment.empty?
+  puts ("  " * depth + l + r).rstrip + comment
 end
 
 # パーティを出力
@@ -53,11 +54,11 @@ def puts_party(party)
   f(2, "Atk", actors.map{|a| a.atk })
   f(2, "Def", actors.map{|a| a.def })
   f(2, "Agi", actors.map{|a| a.agi })
-  f(2, "Eva", actors.map{|a| "%.2f%%"%[a.eva*100] })
+  f(2, "Eva", actors.map{|a| "%.2f%%"%[a.eva*100] }, "みかわし率")
 
   f(1, "Item")
-  f(2, "Herb", actors.map{|a| a.inventory[:Herb] })
-  f(2, "Leaf", actors.map{|a| a.inventory[:Leaf] })
+  f(2, "Herb", actors.map{|a| a.inventory[:Herb] }, "薬草")
+  f(2, "Leaf", actors.map{|a| a.inventory[:Leaf] }, "世界樹の葉")
 
   g = ->pre{
     actors.map{|a|
@@ -68,12 +69,12 @@ def puts_party(party)
   }
   f(1, "Damage Range")
   f(2, "Inopp")
-  f(3, "Attack", g["ino_attack"])
-  f(3, "Fury", g["ino_fury"])
-  f(3, "BrutalHit", g["ino_brut"])
+  f(3, "Attack", g["ino_attack"], "攻撃")
+  f(3, "Fury", g["ino_fury"], "武器を振り回す")
+  f(3, "BrutalHit", g["ino_brut"], "痛恨の一撃")
   f(2, "Gonz")
   f(3, "Attack", g["gon_attack"])
-  f(3, "Tail/Claw", g["gon_fury"])
+  f(3, "Tail/Claw", g["gon_fury"], "尻尾/爪できりさく")
   f(3, "BrutalHit", g["gon_brut"])
   puts
 end
@@ -112,17 +113,11 @@ end
 
 # 結果を出力
 def puts_result(key, total)
-  def f(depth, label, datas = [])
-    l = label.ljust(Label_Width - depth * 2)
-    r = datas.map{|s| "%10s"%s } * ""
-    puts ("  " * depth + l + r).rstrip
-  end
-
   h = $result[key]
   f(0, "* " + key.to_s.capitalize)
   f(1, "Ave. turn count: %.2f" % [h[:turn_count].fdiv(total)])
   f(1, "Party:")
-  f(2, "", h[:party].keys.map{|i| "No.#{i}" })
+  f(2, "", h[:party].keys.map{|i| "No.#{i+1}" })
   tbl = {
     dead: "Death rate on battle end",
     hp: "Ave. HP on battle end",
@@ -142,7 +137,7 @@ def puts_result(key, total)
     "%.2f"%h[:party][i][:leaf_count].fdiv(total)
   })
 
-  f(1, "Distribution of Leaf count:")
+  f(1, "Distribution of Leaf count:", [], "世界樹の葉消費数の分布")
   leaf_distribution_sum = 0
   h[:leaf_distribution].sort.each{|leaf_count, n|
     f(2, "%5d%9.2f%%"%[leaf_count, n.fdiv(total) * 100])
@@ -151,7 +146,7 @@ def puts_result(key, total)
   f(2, "Ave. %10.2f"%[leaf_distribution_sum.fdiv(total)])
 
   f(1, "Troop:")
-  f(2, "", h[:troop].keys.map{|i| "No.#{i}" })
+  f(2, "", h[:troop].keys.map{|i| "No.#{i+1}" })
   f(2, "Death rate on battle end", h[:troop].size.times.map{|i|
     "%.2f%%"%[h[:troop][i][:dead].fdiv(total) * 100]
   })
