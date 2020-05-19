@@ -1,8 +1,10 @@
 <!-- TOC depthFrom:1 depthTo:3 insertAnchor:false orderedList:false -->
 
-- [PS版DQ7 イノゴン戦シミュレータ](#ps版dq7-イノゴン戦シミュレータ)
-  - [使い方](#使い方)
-  - [出力の例](#出力の例)
+- [結果](#結果)
+  - [葉2](#葉2)
+  - [葉1(主)](#葉1主)
+  - [葉1(マ)](#葉1マ)
+  - [葉0](#葉0)
     - [`$option[:N] = 10000`](#optionn--10000)
     - [`$option[:log_timing] = :turn`](#optionlog_timing--turn)
     - [`$option[:log_timing] = :result`](#optionlog_timing--result)
@@ -10,21 +12,21 @@
 
 <!-- /TOC -->
 
-# PS版DQ7 イノゴン戦シミュレータ
+# 結果
 
-PS版DQ7RTAにおいて最も勝率が低いとされている戦闘であるイノゴン戦の勝率を楽して見極めるために**今更**作ったやつ。[RGPツクールVX Ace](https://store.steampowered.com/app/220700/RPG_Maker_VX_Ace/)のスクリプトRGSS3を元にしています。
+10万回試行
 
-現在対応しているのは、
-- [腹黒パンダ氏の戦術](https://harapan.exblog.jp/15510551/)([装備種配分](https://github.com/pingval/DQ7/raw/master/psdq7-status.zip))
-- [自分の戦術](https://github.com/pingval/DQ7/blob/master/pingval-psdq7-Aira183-chart.txt#L1649)([装備種配分](https://github.com/pingval/DQ7/raw/master/psdq7-status.zip))
+## 葉2
 
-## 使い方
+```
+```
 
-`Ruby psdq7_InoGon_simulator.rb`
 
-$optionをいろいろ書き換えていろいろやる。
+## 葉1(主)
 
-## 出力の例
+## 葉1(マ)
+
+## 葉0
 
 ### `$option[:N] = 10000`
 10000回試行。

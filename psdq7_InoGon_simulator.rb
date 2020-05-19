@@ -84,7 +84,7 @@ def puts_inventory(party)
   actors = party.actors
 
   f(1, "", (1..actors.size).map{|i| "No.#{i}" })
-  f(1, "Item")
+  f(1, "Item on battle end")
   f(2, "Herb", actors.map{|a|
     next a.inventory[:Herb] if a.inventory[:Herb] > 100
     first = a.first_inventory[:Herb]
@@ -114,6 +114,7 @@ def tally_result(*keys)
     $game_party.actors.each_with_index{|actor, i|
       h[:party] ||= {}
       h[:party][i] ||= Hash.new 0
+      h[:party][i][:death_count] += actor.death_count
       h[:party][i][:dead] += actor.dead? ? 1 : 0
       h[:party][i][:hp] += actor.hp
       h[:party][i][:herb_count] += actor.first_inventory[:Herb] - actor.inventory[:Herb]
@@ -145,6 +146,9 @@ def puts_result(key, total)
     herb_count: "Ave. Herb count",
     leaf_count: "Ave. Leaf count",
   }
+  f(2, "Ave. death count", h[:party].size.times.map{|i|
+    "%.2f"%h[:party][i][:death_count].fdiv(total)
+  })
   f(2, "Death rate on battle end", h[:party].size.times.map{|i|
     "%.2f%%"%[h[:party][i][:dead].fdiv(total) * 100]
   })
@@ -211,10 +215,10 @@ def main
       puts_party(tmp_party)
     end
 
-    # a, b, c = $game_party.actors
-    # c.inventory[:Leaf] = 0
-    # b.inventory[:Leaf] = 0
-    # a.hp = 0
+    # パーティや敵の状態をいろいろやる
+    if $option[:callback]
+      $option[:callback][]
+    end
 
     scene = Scene_Battle.new
     case scene.test
@@ -250,6 +254,11 @@ $option = {
   party: Party_Pingval,
   mari_lv11: false,
   seed_type: :rand,
+  callback: ->{
+    # a, b, c = $game_party.actors
+    # b.inventory[:Leaf] = 0
+    # c.inventory[:Leaf] = 0
+  },
 }
 
 main()

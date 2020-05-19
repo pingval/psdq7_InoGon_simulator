@@ -122,6 +122,7 @@ class Game_Battler < Game_BattlerBase
   attr_reader   :result                   # 行動結果（対象側）
   attr_reader   :action_count             # 行動した回数
   attr_reader   :heal_range_on_turn_end
+  attr_reader   :death_count
 
   def initialize(**rest)
     @name = ""
@@ -130,6 +131,7 @@ class Game_Battler < Game_BattlerBase
     @action_count = 0
     @result = Game_ActionResult.new(self)
     @heal_range_on_turn_end = nil
+    @death_count = 0
     super
   end
 
@@ -173,7 +175,7 @@ class Game_Battler < Game_BattlerBase
   end
 
   def die
-    @hp = 0
+    sefl.hp = 0
     clear_states
   end
   
@@ -257,6 +259,7 @@ class Game_Battler < Game_BattlerBase
   end
 
   def execute_damage(user)
+    _alive = alive?
     self.hp -= @result.hp_damage
     self.mp -= @result.mp_damage
 
@@ -265,6 +268,9 @@ class Game_Battler < Game_BattlerBase
 
     if dead?
       clear_states
+    end
+    if _alive && dead?
+      @death_count += 1
     end
   end
 
@@ -352,7 +358,7 @@ class Game_Battler < Game_BattlerBase
   def on_turn_end
     @result.clear
     remove_states_auto(:turn)
-    if !@heal_range_on_turn_end.nil?
+    if alive? && !@heal_range_on_turn_end.nil?
       self.hp += rand(@heal_range_on_turn_end)
     end
   end
