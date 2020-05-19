@@ -18,6 +18,8 @@ PS版DQ7RTAにおいて最も勝率が低いとされている戦闘であるイ
 - [腹黒パンダ氏の戦術](https://harapan.exblog.jp/15510551/)([装備種配分](https://github.com/pingval/DQ7/raw/master/psdq7-status.zip))
 - [自分の戦術](https://github.com/pingval/DQ7/blob/master/pingval-psdq7-Aira183-chart.txt#L1649)([装備種配分](https://github.com/pingval/DQ7/raw/master/psdq7-status.zip))
 
+- [シミュレーション結果](results.md)
+
 ## 使い方
 
 `Ruby psdq7_InoGon_simulator.rb`
