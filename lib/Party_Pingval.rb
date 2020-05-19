@@ -3,7 +3,6 @@
 # 　- ガが死んでいるときに、主がまんたんなら主の葉を優先的に使う
 # from https://github.com/pingval/DQ7/blob/master/pingval-psdq7-Aira183-chart.txt#L1649
 # 実際はいろいろ違う
-# ガボが死んだとき、主の葉はあるがマの葉がないときは？
 class Game_Party_Pingval < Game_Party
   def set_actions
     a, b, c = actors
@@ -13,7 +12,7 @@ class Game_Party_Pingval < Game_Party
 
     case [a.alive?, b.alive?, c.alive?]
     when [ true,  true,  true]
-      # 3番目
+      # 3列目
       damaged_actor = alive_actors.max_by{|actor| actor.dmg }
       if damaged_actor.dmg > 10
         c.set(:Herb, damaged_actor)
@@ -22,14 +21,14 @@ class Game_Party_Pingval < Game_Party
       else
         c.set(:Herb, a)
       end
-      # 2番目
+      # 2列目
       if b.dmg > abc_hero_guard_dmg
         b.set(:Guard)
       else
         damaged_actor_hp = damaged_actor.hp
         damaged_actor_dmg = damaged_actor.dmg
         begin
-          # 一時的に回復して2人目の回復対象を選択
+          # 石対象を一時的に回復して、2列目の回復対象を選択
           damaged_actor.hp += 35
           damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
           if damaged_actor2.dmg > 15 && b.has?(:Herb)
@@ -44,7 +43,7 @@ class Game_Party_Pingval < Game_Party
           damaged_actor.hp = damaged_actor_hp
         end
       end
-      # 1番目
+      # 1列目
       if a.dying?
         a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.lowest_hp_member)
       else
@@ -62,6 +61,7 @@ class Game_Party_Pingval < Game_Party
       end
 
     when [false,  true,  true]
+      # 2列目しか葉を持っていない場合を含む
       if b.has?(:Leaf) && b.safe?
         b.set(:Leaf, a)
         c.set(:Herb, b)
@@ -86,7 +86,7 @@ class Game_Party_Pingval < Game_Party
           damaged_actor_hp = damaged_actor.hp
           damaged_actor_dmg = damaged_actor.dmg
           begin
-            # 一時的に回復して2人目の回復対象を選択
+            # 石対象を一時的に回復して、2列目の回復対象を選択
             damaged_actor.hp += 35
             damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
             if damaged_actor2.dmg > 15 && b.has?(:Herb)
@@ -125,7 +125,6 @@ class Game_Party_Pingval < Game_Party
       else
         a.set(:Guard)
       end
-      a.set(:Herb, c) if c.dying? && a.has?(:Herb)
 
     when [ true,  true, false]
       if b.has?(:Leaf)
