@@ -5,7 +5,6 @@
 # > が基本。例外は、ガボor主人公は瀕死で防御しても耐えられない時のみ自身に薬草、
 # > 砂煙が主人公に入ったら切れるまで防御、蘇生はマリベルの葉から使用、マリベルの世界樹を使った場合は石先読みの対象を主人公に変更する、辺りか。
 # 実際はたぶんいろいろ違う
-# ガボが死んだとき、主の葉はあるがマの葉がないときは？
 class Game_Party_Panda < Game_Party
   def set_actions
     a, b, c = actors
@@ -15,7 +14,7 @@ class Game_Party_Panda < Game_Party
 
     case [a.alive?, b.alive?, c.alive?]
     when [ true,  true,  true]
-      # 3番目
+      # 3列目
       damaged_actor = alive_actors.max_by{|actor| actor.dmg }
       if damaged_actor.dmg > 10
         c.set(:Herb, damaged_actor)
@@ -24,14 +23,14 @@ class Game_Party_Panda < Game_Party
       else
         c.set(:Herb, a)
       end
-      # 2番目
+      # 2列目
       if b.dmg > abc_hero_guard_dmg
         b.set(:Guard)
       else
         damaged_actor_hp = damaged_actor.hp
         damaged_actor_dmg = damaged_actor.dmg
         begin
-          # 一時的に回復して2人目の回復対象を選択
+          # 石対象を一時的に回復して、2列目の回復対象を選択
           damaged_actor.hp += 35
           damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
           if damaged_actor2.dmg > 15 && b.has?(:Herb)
@@ -45,7 +44,7 @@ class Game_Party_Panda < Game_Party
           damaged_actor.hp = damaged_actor_hp
         end
       end
-      # 1番目
+      # 1列目
       if a.dying?
         a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.lowest_hp_member)
       else
@@ -64,7 +63,11 @@ class Game_Party_Panda < Game_Party
 
     when [false,  true,  true]
       if c.has?(:Leaf)
-        b.set(:Guard)
+        if b.dying?
+          b.has?(:Herb) ? b.set(:Herb, b) : b.set(:Boomerang)
+        else
+          b.set(:Guard)
+        end
         c.set(:Leaf, a)
       elsif b.has?(:Leaf)
         b.set(:Leaf, a)
@@ -83,7 +86,7 @@ class Game_Party_Panda < Game_Party
           damaged_actor_hp = damaged_actor.hp
           damaged_actor_dmg = damaged_actor.dmg
           begin
-            # 一時的に回復して2人目の回復対象を選択
+            # 石対象を一時的に回復して、2列目の回復対象を選択
             damaged_actor.hp += 35
             damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
             if damaged_actor2.dmg > 15 && b.has?(:Herb)
@@ -122,7 +125,6 @@ class Game_Party_Panda < Game_Party
       else
         a.set(:Guard)
       end
-      a.set(:Herb, c) if c.dying? && a.has?(:Herb)
 
     when [ true,  true, false]
       if b.has?(:Leaf)
@@ -161,9 +163,10 @@ class Game_Party_Panda < Game_Party
       if b.has?(:Leaf)
         b.set(:Leaf, c)
       else
-        b.set(:Guard)
         if b.dying?
           b.has?(:Herb) ? b.set(:Herb, b) : b.set(:Boomerang)
+        else
+          b.set(:Guard)
         end
       end
 
