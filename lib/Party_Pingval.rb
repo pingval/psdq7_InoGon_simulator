@@ -62,17 +62,15 @@ class Game_Party_Pingval < Game_Party
       end
 
     when [false,  true,  true]
-      # if c.has?(:Leaf)
-      #   b.set(:Guard)
-      #   c.set(:Leaf, a)
-      # elsif b.has?(:Leaf)
-      #   b.set(:Leaf, a)
-      #   c.set(:Herb, b)
       if b.has?(:Leaf) && b.safe?
         b.set(:Leaf, a)
         c.set(:Herb, b)
       elsif c.has?(:Leaf)
-        b.set(:Guard)
+        if b.dying?
+          b.has?(:Herb) ? b.set(:Herb, b) : b.set(:Boomerang)
+        else
+          b.set(:Guard)
+        end
         c.set(:Leaf, a)
       else
         damaged_actor = alive_actors.max_by{|actor| actor.dmg }
@@ -164,9 +162,10 @@ class Game_Party_Pingval < Game_Party
       if b.has?(:Leaf)
         b.set(:Leaf, c)
       else
-        b.set(:Guard)
         if b.dying?
           b.has?(:Herb) ? b.set(:Herb, b) : b.set(:Boomerang)
+        else
+          b.set(:Guard)
         end
       end
 
