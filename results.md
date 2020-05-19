@@ -1,7 +1,7 @@
 <!-- TOC depthFrom:1 depthTo:3 insertAnchor:false orderedList:false -->
 
 - [シミュレーション結果](#シミュレーション結果)
-  - [[ping値マリベル石](./lib/Party_Pingval.rb)](#ping値マリベル石libparty_pingvalrb)
+  - [ping値マリベル石](#ping値マリベル石)
     - [葉: 主1マ1](#葉-主1マ1)
     - [葉: 主1マ0](#葉-主1マ0)
     - [葉: 主0マ1](#葉-主0マ1)
@@ -16,7 +16,9 @@
 | ping値マリベル石 | 11 | 83.48% | 21.98 | 1.14 |
 | ping値マリベル石 | 10 | 76.86% | 21.86 | 1.18 |
 
-## [ping値マリベル石](./lib/Party_Pingval.rb)
+## ping値マリベル石
+
+[ping値マリベル石](./lib/Party_Pingval.rb)
 
 10万回試行
 
