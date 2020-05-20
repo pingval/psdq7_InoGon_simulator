@@ -187,7 +187,9 @@ def hero_Panda(seed_type: :rand)
     seed_type: seed_type,
 
     equipments: {
+      # 刃ブ、スピ
       atk: 26 + 1,
+      # 派服、鉄盾、貝帽
       def: 28 + 13 + 8,
       agi: 0,
       eva: 0,
@@ -204,9 +206,12 @@ def mari_Panda(seed_type: :rand, mari_lv11: false)
     seed_type: seed_type,
 
     equipments: {
+      # 毒刀
       atk: 23,
+      # 身服、シト、兎耳、祈輪
       def: 28 + 15 + 15 + 5,
       agi: 0,
+      # 身服のみかわし率
       eva: 1r/6,
     },
     seeds: { mhp: 2, mmp: 1, atk: 0, def: 3, agi: 0, },
@@ -221,7 +226,9 @@ def gabo_Panda(seed_type: :rand)
     seed_type: seed_type,
 
     equipments: {
+      # 鉄爪
       atk: 21,
+      # 毛マ、シト、尖帽
       def: 18 + 9 + 5,
       agi: 0,
       eva: 0,
