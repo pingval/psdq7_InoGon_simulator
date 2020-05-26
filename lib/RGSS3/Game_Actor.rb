@@ -203,6 +203,7 @@ class Game_Actor < Game_Battler
     # hp <= gon_attack_min / 2
     hp <= ino_attack_min / 2
     # hp <= current_attack_min / 2
+    # hp <= self.send($a) / 2
   end
 
   # 攻撃されたら防御しないと死ぬ
@@ -212,6 +213,7 @@ class Game_Actor < Game_Battler
     # hp <= gon_attack_min
     hp <= ino_attack_min
     # hp <= current_attack_min
+    # hp <= self.send($a)
   end
 
   # HPまんたん

@@ -16,12 +16,23 @@ RGSS3_Require_Order = %w[
   BattlerManager
   Scene_Battle
 ]
+Lib_Require_Order = %w[
+  Variables
+  Party_Panda
+  Party_Pingval
+  Party_MariStone1
+  Party_MariStone2
+  Party_GaboStone1
+  Party_GaboStone2
+  Party_GaboStone3
+]
 
 RGSS3_Require_Order.each{|basename|
   rb = File.join(RGSS3_Dir, basename)
   require rb
 }
-Dir.glob(File.join(Lib_Dir, "*.rb")){|rb|
+Lib_Require_Order.each{|basename|
+  rb = File.join(Lib_Dir, basename)
   require rb
 }
 
@@ -249,9 +260,9 @@ end
 
 # log_timing: none, battle, turn, action, result
 $option = {
-  N: 1000,
+  N: 10000,
   log_timing: :none,
-  party: Party_Pingval,
+  party: Party_MariStone1,
   mari_lv11: false,
   seed_type: :rand,
   callback: ->{

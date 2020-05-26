@@ -8,9 +8,10 @@ class Game_BattlerBase
     clear_states
   end
 
-  def dmg
+  def hp_damage
     @mhp - @hp
   end
+  alias :dmg :hp_damage
 
   def clear_states
     @state_counts = {}

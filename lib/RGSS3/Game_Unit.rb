@@ -59,9 +59,10 @@ class Game_Unit
     alive_members.empty?
   end
 
-  def lowest_hp_member
+  def min_hp_member
     alive_members.min_by{|member| member.hp }
   end
+  alias :lowest_hp_member :min_hp_member
 
   def to_s
     members.map(&:to_s) * " | "

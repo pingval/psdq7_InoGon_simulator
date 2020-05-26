@@ -7,14 +7,24 @@ class Game_Party_Pingval < Game_Party
   def set_actions
     a, b, c = actors
 
-    abc_hero_guard_dmg = c.has?(:Leaf) ? 50 : 40
-    bc_hero_guard_dmg = 30
+    # 最初の(奇跡の石の)回復基準被ダメ
+    abc_first_herb_dmg = 5
+    # 2番目の(2列目による)回復基準被ダメ
+    abc_second_herb_dmg = 10
+    # 2列目の防御基準HP
+    abc_b_guard_hp = c.has?(:Leaf) ? 30 : 45
+
+    bc_first_herb_dmg = 15
+    bc_second_herb_dmg = abc_second_herb_dmg
+    bc_b_guard_hp = 55
+
+    ab_first_herb_dmg = 10
 
     case [a.alive?, b.alive?, c.alive?]
     when [ true,  true,  true]
       # 3列目
       damaged_actor = alive_actors.max_by{|actor| actor.dmg }
-      if damaged_actor.dmg > 10
+      if damaged_actor.dmg > abc_first_herb_dmg
         c.set(:Herb, damaged_actor)
       elsif !c.has?(:Leaf)
         c.set(:Herb, b)
@@ -22,7 +32,7 @@ class Game_Party_Pingval < Game_Party
         c.set(:Herb, a)
       end
       # 2列目
-      if b.dmg > abc_hero_guard_dmg
+      if b.hp < abc_b_guard_hp
         b.set(:Guard)
       else
         damaged_actor_hp = damaged_actor.hp
@@ -31,7 +41,7 @@ class Game_Party_Pingval < Game_Party
           # 石対象を一時的に回復して、2列目の回復対象を選択
           damaged_actor.hp += 35
           damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
-          if damaged_actor2.dmg > 15 && b.has?(:Herb)
+          if damaged_actor2.dmg > abc_second_herb_dmg && b.has?(:Herb)
             b.set(:Herb, damaged_actor2)
           elsif ((b.blind? && damaged_actor == b && damaged_actor_dmg > 0) ||
                  (!c.has?(:Leaf) && damaged_actor == b && damaged_actor_dmg > 0))
@@ -45,7 +55,7 @@ class Game_Party_Pingval < Game_Party
       end
       # 1列目
       if a.dying?
-        a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.lowest_hp_member)
+        a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.min_hp_member)
       else
         a.set(:Guard)
       end
@@ -74,13 +84,13 @@ class Game_Party_Pingval < Game_Party
         c.set(:Leaf, a)
       else
         damaged_actor = alive_actors.max_by{|actor| actor.dmg }
-        if damaged_actor.dmg > 30
+        if damaged_actor.dmg > bc_first_herb_dmg
           c.set(:Herb, damaged_actor)
         else
           c.set(:Herb, b)
         end
 
-        if b.dmg > bc_hero_guard_dmg
+        if b.hp < bc_b_guard_hp
           b.set(:Guard)
         else
           damaged_actor_hp = damaged_actor.hp
@@ -89,7 +99,7 @@ class Game_Party_Pingval < Game_Party
             # 石対象を一時的に回復して、2列目の回復対象を選択
             damaged_actor.hp += 35
             damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
-            if damaged_actor2.dmg > 15 && b.has?(:Herb)
+            if damaged_actor2.dmg > bc_second_herb_dmg && b.has?(:Herb)
               b.set(:Herb, damaged_actor2)
             elsif b.blind? || (!c.has?(:Leaf) && damaged_actor == b && damaged_actor_dmg > 0)
               b.set(:Guard)
@@ -121,7 +131,7 @@ class Game_Party_Pingval < Game_Party
         c.set(:Herb, c)
       end
       if a.dying?
-        a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.lowest_hp_member)
+        a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.min_hp_member)
       else
         a.set(:Guard)
       end
@@ -131,7 +141,7 @@ class Game_Party_Pingval < Game_Party
         b.set(:Leaf, c)
       else
         if b.safe?
-          if a.dmg > 15 && b.has?(:Herb)
+          if a.dmg > ab_first_herb_dmg && b.has?(:Herb)
             b.set(:Herb, a)
           else
             b.set(:Boomerang)
@@ -144,7 +154,7 @@ class Game_Party_Pingval < Game_Party
         end
       end
       if a.dying?
-        a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.lowest_hp_member)
+        a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.min_hp_member)
       else
         a.set(:Guard)
       end
@@ -170,7 +180,7 @@ class Game_Party_Pingval < Game_Party
 
     when [ true, false, false]
       if a.dying?
-        a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.lowest_hp_member)
+        a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.min_hp_member)
       else
         a.set(:Guard)
       end
