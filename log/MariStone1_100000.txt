@@ -1,0 +1,1371 @@
+"Party_MariStone1"
+"主:鉄兜、ガ:貝帽"
+[1, 1]
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x0000000006408db8 Party_MariStone1.rb:1 (lambda)>
+Maribel's Level: 11
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        67
+    Max MP                             8        29        45
+    Atk                               47        64        37
+    Def                               48        71        78
+    Agi                               44        18        33
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      30..36    25..29    23..27 ; 攻撃
+      Fury                        37..45    31..36    28..33 ; 武器を振り回す
+      BrutalHit                 *75..*90    62..72   57..*67 ; 痛恨の一撃
+    Gonz
+      Attack                      25..29    20..24    18..22
+      Tail/Claw                   31..36    25..30    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *62..*72    50..60    45..55
+
+Win rate:	88.69%
+* Win
+  Ave. turn count: 22.04
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.70      0.33      0.14
+    Death rate on battle end      11.36%     3.50%     2.70%
+    Ave. HP on battle end          45.92     70.01     61.15
+    Ave. Herb count                 0.15      2.27       NaN
+    Ave. Leaf count                 0.00      0.54      0.47
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0    30.91%
+        1    37.89%
+        2    31.21%
+    Ave.       1.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 21.26
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.74      1.49      1.16
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.19      1.66       NaN
+    Ave. Leaf count                 0.00      0.67      0.72
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0     7.27%
+        1    46.48%
+        2    46.26%
+    Ave.       1.39
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       4.31%     7.24%
+    Ave. HP on battle end         140.38    124.42
+
+* Both
+  Ave. turn count: 21.95
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.82      0.46      0.26
+    Death rate on battle end      21.38%    14.41%    13.71%
+    Ave. HP on battle end          40.73     62.10     54.24
+    Ave. Herb count                 0.15      2.20       NaN
+    Ave. Leaf count                 0.00      0.55      0.50
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0    28.24%
+        1    38.86%
+        2    32.91%
+    Ave.       1.05
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      89.18%    89.51%
+    Ave. HP on battle end          15.88     14.07
+
+--------------------------------------------------
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x0000000006408db8 Party_MariStone1.rb:1 (lambda)>
+Maribel's Level: 10
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        57
+    Max MP                             8        29        39
+    Atk                               47        64        36
+    Def                               48        71        77
+    Agi                               44        18        30
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      30..36    25..29    24..28 ; 攻撃
+      Fury                        37..45    31..36    30..35 ; 武器を振り回す
+      BrutalHit                 *75..*90    62..72  *60..*70 ; 痛恨の一撃
+    Gonz
+      Attack                      25..29    20..24    18..22
+      Tail/Claw                   31..36    25..30    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *62..*72    50..60    45..55
+
+Win rate:	82.79%
+* Win
+  Ave. turn count: 21.95
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.69      0.32      0.25
+    Death rate on battle end      12.36%     3.32%     5.64%
+    Ave. HP on battle end          44.99     69.46     50.36
+    Ave. Herb count                 0.16      2.13       NaN
+    Ave. Leaf count                 0.00      0.57      0.47
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0    28.96%
+        1    37.69%
+        2    33.35%
+    Ave.       1.04
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 19.86
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.69      1.38      1.29
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.21      1.59       NaN
+    Ave. Leaf count                 0.00      0.74      0.62
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0     9.66%
+        1    44.77%
+        2    45.57%
+    Ave.       1.36
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       4.00%     6.44%
+    Ave. HP on battle end         146.97    133.34
+
+* Both
+  Ave. turn count: 21.59
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.86      0.50      0.43
+    Death rate on battle end      27.44%    19.96%    21.88%
+    Ave. HP on battle end          37.24     57.51     41.69
+    Ave. Herb count                 0.17      2.04       NaN
+    Ave. Leaf count                 0.00      0.60      0.50
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0    25.64%
+        1    38.90%
+        2    35.46%
+    Ave.       1.10
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      83.48%    83.90%
+    Ave. HP on battle end          25.29     22.95
+
+----------------------------------------------------------------------------------------------------
+[1, 0]
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x0000000006408db8 Party_MariStone1.rb:1 (lambda)>
+Maribel's Level: 11
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        67
+    Max MP                             8        29        45
+    Atk                               47        64        37
+    Def                               48        71        78
+    Agi                               44        18        33
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      30..36    25..29    23..27 ; 攻撃
+      Fury                        37..45    31..36    28..33 ; 武器を振り回す
+      BrutalHit                 *75..*90    62..72   57..*67 ; 痛恨の一撃
+    Gonz
+      Attack                      25..29    20..24    18..22
+      Tail/Claw                   31..36    25..30    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *62..*72    50..60    45..55
+
+Win rate:	68.61%
+* Win
+  Ave. turn count: 23.68
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.86      0.09      0.13
+    Death rate on battle end      28.29%     8.51%     4.08%
+    Ave. HP on battle end          35.73     66.59     58.87
+    Ave. Herb count                 0.20      2.11       NaN
+    Ave. Leaf count                 0.00      0.67      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    33.14%
+        2    66.86%
+    Ave.       1.67
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 20.09
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.43      1.00      1.10
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.18      1.10       NaN
+    Ave. Leaf count                 0.00      0.52      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    47.84%
+        2    52.16%
+    Ave.       1.52
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       3.08%     5.12%
+    Ave. HP on battle end         171.30    152.55
+
+* Both
+  Ave. turn count: 22.55
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.04      0.37      0.43
+    Death rate on battle end      50.80%    37.22%    34.19%
+    Ave. HP on battle end          24.51     45.69     40.40
+    Ave. Herb count                 0.19      1.79       NaN
+    Ave. Leaf count                 0.00      0.62      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    37.75%
+        2    62.25%
+    Ave.       1.62
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      69.58%    70.22%
+    Ave. HP on battle end          53.77     47.88
+
+--------------------------------------------------
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x0000000006408db8 Party_MariStone1.rb:1 (lambda)>
+Maribel's Level: 10
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        57
+    Max MP                             8        29        39
+    Atk                               47        64        36
+    Def                               48        71        77
+    Agi                               44        18        30
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      30..36    25..29    24..28 ; 攻撃
+      Fury                        37..45    31..36    30..35 ; 武器を振り回す
+      BrutalHit                 *75..*90    62..72  *60..*70 ; 痛恨の一撃
+    Gonz
+      Attack                      25..29    20..24    18..22
+      Tail/Claw                   31..36    25..30    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *62..*72    50..60    45..55
+
+Win rate:	61.40%
+* Win
+  Ave. turn count: 23.41
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.82      0.07      0.24
+    Death rate on battle end      29.00%     7.17%     7.56%
+    Ave. HP on battle end          35.08     66.73     48.40
+    Ave. Herb count                 0.21      1.96       NaN
+    Ave. Leaf count                 0.00      0.70      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    30.28%
+        2    69.72%
+    Ave.       1.70
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 19.11
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.43      1.00      1.19
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.19      1.10       NaN
+    Ave. Leaf count                 0.00      0.62      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    38.34%
+        2    61.66%
+    Ave.       1.62
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       3.09%     4.72%
+    Ave. HP on battle end         173.25    155.27
+
+* Both
+  Ave. turn count: 21.75
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.06      0.43      0.61
+    Death rate on battle end      56.40%    43.00%    43.24%
+    Ave. HP on battle end          21.54     40.97     29.72
+    Ave. Herb count                 0.20      1.63       NaN
+    Ave. Leaf count                 0.00      0.67      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    33.39%
+        2    66.61%
+    Ave.       1.67
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      62.60%    63.22%
+    Ave. HP on battle end          66.87     59.93
+
+----------------------------------------------------------------------------------------------------
+[0, 1]
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x0000000006408db8 Party_MariStone1.rb:1 (lambda)>
+Maribel's Level: 11
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        67
+    Max MP                             8        29        45
+    Atk                               47        64        37
+    Def                               48        71        78
+    Agi                               44        18        33
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      30..36    25..29    23..27 ; 攻撃
+      Fury                        37..45    31..36    28..33 ; 武器を振り回す
+      BrutalHit                 *75..*90    62..72   57..*67 ; 痛恨の一撃
+    Gonz
+      Attack                      25..29    20..24    18..22
+      Tail/Claw                   31..36    25..30    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *62..*72    50..60    45..55
+
+Win rate:	74.91%
+* Win
+  Ave. turn count: 22.20
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.63      0.29      0.05
+    Death rate on battle end      25.37%     4.66%     5.24%
+    Ave. HP on battle end          38.23     68.27     58.78
+    Ave. Herb count                 0.15      2.20       NaN
+    Ave. Leaf count                 0.00      1.00      0.62
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    37.76%
+        2    62.24%
+    Ave.       1.62
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 19.09
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.35      1.29      1.00
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.18      1.62       NaN
+    Ave. Leaf count                 0.00      1.00      0.63
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    36.73%
+        2    63.27%
+    Ave.       1.63
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       3.42%     5.25%
+    Ave. HP on battle end         161.64    145.99
+
+* Both
+  Ave. turn count: 21.42
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.81      0.54      0.29
+    Death rate on battle end      44.09%    28.58%    29.02%
+    Ave. HP on battle end          28.63     51.14     44.03
+    Ave. Herb count                 0.15      2.06       NaN
+    Ave. Leaf count                 0.00      1.00      0.62
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    37.50%
+        2    62.50%
+    Ave.       1.62
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      75.77%    76.22%
+    Ave. HP on battle end          40.56     36.63
+
+--------------------------------------------------
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x0000000006408db8 Party_MariStone1.rb:1 (lambda)>
+Maribel's Level: 10
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        57
+    Max MP                             8        29        39
+    Atk                               47        64        36
+    Def                               48        71        77
+    Agi                               44        18        30
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      30..36    25..29    24..28 ; 攻撃
+      Fury                        37..45    31..36    30..35 ; 武器を振り回す
+      BrutalHit                 *75..*90    62..72  *60..*70 ; 痛恨の一撃
+    Gonz
+      Attack                      25..29    20..24    18..22
+      Tail/Claw                   31..36    25..30    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *62..*72    50..60    45..55
+
+Win rate:	64.13%
+* Win
+  Ave. turn count: 21.93
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.61      0.27      0.09
+    Death rate on battle end      24.40%     4.07%     9.35%
+    Ave. HP on battle end          38.42     67.69     47.91
+    Ave. Herb count                 0.15      2.05       NaN
+    Ave. Leaf count                 0.00      1.00      0.60
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    40.18%
+        2    59.82%
+    Ave.       1.60
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 17.51
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.28      1.23      1.00
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.20      1.50       NaN
+    Ave. Leaf count                 0.00      1.00      0.51
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    49.47%
+        2    50.53%
+    Ave.       1.51
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       2.90%     4.61%
+    Ave. HP on battle end         176.08    159.75
+
+* Both
+  Ave. turn count: 20.35
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.85      0.61      0.42
+    Death rate on battle end      51.52%    38.48%    41.87%
+    Ave. HP on battle end          24.64     43.41     30.72
+    Ave. Herb count                 0.17      1.85       NaN
+    Ave. Leaf count                 0.00      1.00      0.56
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    43.52%
+        2    56.48%
+    Ave.       1.56
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      65.17%    65.78%
+    Ave. HP on battle end          63.16     57.30
+
+----------------------------------------------------------------------------------------------------
+[0, 0]
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x0000000006408db8 Party_MariStone1.rb:1 (lambda)>
+Maribel's Level: 11
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        67
+    Max MP                             8        29        45
+    Atk                               47        64        37
+    Def                               48        71        78
+    Agi                               44        18        33
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      30..36    25..29    23..27 ; 攻撃
+      Fury                        37..45    31..36    28..33 ; 武器を振り回す
+      BrutalHit                 *75..*90    62..72   57..*67 ; 痛恨の一撃
+    Gonz
+      Attack                      25..29    20..24    18..22
+      Tail/Claw                   31..36    25..30    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *62..*72    50..60    45..55
+
+Win rate:	50.78%
+* Win
+  Ave. turn count: 23.70
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.57      0.09      0.06
+    Death rate on battle end      56.63%     9.10%     6.44%
+    Ave. HP on battle end          21.50     64.33     55.93
+    Ave. Herb count                 0.16      1.88       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 18.26
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.00      1.00      1.00
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.13      1.07       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       2.42%     3.86%
+    Ave. HP on battle end         179.44    162.25
+
+* Both
+  Ave. turn count: 21.03
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.78      0.54      0.52
+    Death rate on battle end      77.97%    53.84%    52.48%
+    Ave. HP on battle end          10.92     32.67     28.40
+    Ave. Herb count                 0.15      1.48       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      51.98%    52.68%
+    Ave. HP on battle end          88.31     79.86
+
+--------------------------------------------------
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x0000000006408db8 Party_MariStone1.rb:1 (lambda)>
+Maribel's Level: 10
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        57
+    Max MP                             8        29        39
+    Atk                               47        64        36
+    Def                               48        71        77
+    Agi                               44        18        30
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      30..36    25..29    24..28 ; 攻撃
+      Fury                        37..45    31..36    30..35 ; 武器を振り回す
+      BrutalHit                 *75..*90    62..72  *60..*70 ; 痛恨の一撃
+    Gonz
+      Attack                      25..29    20..24    18..22
+      Tail/Claw                   31..36    25..30    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *62..*72    50..60    45..55
+
+Win rate:	41.43%
+* Win
+  Ave. turn count: 23.30
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.55      0.08      0.11
+    Death rate on battle end      54.81%     7.71%    11.42%
+    Ave. HP on battle end          22.16     64.08     45.19
+    Ave. Herb count                 0.17      1.74       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 16.92
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.00      1.00      1.00
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.14      1.01       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       2.14%     3.42%
+    Ave. HP on battle end         190.98    172.89
+
+* Both
+  Ave. turn count: 19.56
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.81      0.62      0.63
+    Death rate on battle end      81.28%    61.76%    63.30%
+    Ave. HP on battle end           9.18     26.55     18.72
+    Ave. Herb count                 0.15      1.31       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      42.68%    43.43%
+    Ave. HP on battle end         111.86    101.27
+
+----------------------------------------------------------------------------------------------------
+"主:貝帽、ガ:尖帽"
+[1, 1]
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x000000000639df68 MariStone1_psdq7_InoGon_simulator.rb:299 (lambda)>
+Maribel's Level: 11
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        67
+    Max MP                             8        29        45
+    Atk                               47        64        37
+    Def                               45        63        78
+    Agi                               44        18        33
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      31..37    27..31    23..27 ; 攻撃
+      Fury                        38..46    33..38    28..33 ; 武器を振り回す
+      BrutalHit                 *77..*92    67..77   57..*67 ; 痛恨の一撃
+    Gonz
+      Attack                      26..30    22..26    18..22
+      Tail/Claw                   32..37    27..32    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *65..*75    55..65    45..55
+
+Win rate:	84.34%
+* Win
+  Ave. turn count: 22.44
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.81      0.41      0.13
+    Death rate on battle end      14.84%     5.29%     3.00%
+    Ave. HP on battle end          43.68     68.02     60.60
+    Ave. Herb count                 0.16      2.28       NaN
+    Ave. Leaf count                 0.00      0.58      0.54
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0    25.38%
+        1    37.21%
+        2    37.41%
+    Ave.       1.12
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 21.17
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.76      1.53      1.14
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.19      1.59       NaN
+    Ave. Leaf count                 0.00      0.65      0.78
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0     6.07%
+        1    44.33%
+        2    49.60%
+    Ave.       1.44
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       4.32%     6.67%
+    Ave. HP on battle end         142.38    127.00
+
+* Both
+  Ave. turn count: 22.24
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.96      0.59      0.29
+    Death rate on battle end      28.18%    20.12%    18.19%
+    Ave. HP on battle end          36.84     57.37     51.11
+    Ave. Herb count                 0.17      2.17       NaN
+    Ave. Leaf count                 0.00      0.59      0.58
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0    22.36%
+        1    38.33%
+        2    39.32%
+    Ave.       1.17
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      85.02%    85.39%
+    Ave. HP on battle end          22.29     19.88
+
+--------------------------------------------------
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x000000000639df68 MariStone1_psdq7_InoGon_simulator.rb:299 (lambda)>
+Maribel's Level: 10
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        57
+    Max MP                             8        29        39
+    Atk                               47        64        36
+    Def                               45        63        77
+    Agi                               44        18        30
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      31..37    27..31    24..28 ; 攻撃
+      Fury                        38..46    33..38    30..35 ; 武器を振り回す
+      BrutalHit                 *77..*92    67..77  *60..*70 ; 痛恨の一撃
+    Gonz
+      Attack                      26..30    22..26    18..22
+      Tail/Claw                   32..37    27..32    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *65..*75    55..65    45..55
+
+Win rate:	77.62%
+* Win
+  Ave. turn count: 22.30
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.79      0.39      0.24
+    Death rate on battle end      15.81%     4.81%     5.87%
+    Ave. HP on battle end          42.85     67.92     50.00
+    Ave. Herb count                 0.17      2.13       NaN
+    Ave. Leaf count                 0.00      0.61      0.55
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0    23.48%
+        1    36.90%
+        2    39.62%
+    Ave.       1.16
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 19.82
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.70      1.43      1.25
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.21      1.53       NaN
+    Ave. Leaf count                 0.00      0.71      0.68
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0     9.31%
+        1    42.66%
+        2    48.04%
+    Ave.       1.39
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       3.95%     5.67%
+    Ave. HP on battle end         150.00    135.78
+
+* Both
+  Ave. turn count: 21.75
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.99      0.63      0.47
+    Death rate on battle end      34.66%    26.12%    26.94%
+    Ave. HP on battle end          33.25     52.72     38.81
+    Ave. Herb count                 0.18      2.00       NaN
+    Ave. Leaf count                 0.00      0.64      0.58
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        0    20.30%
+        1    38.19%
+        2    41.51%
+    Ave.       1.21
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      78.50%    78.88%
+    Ave. HP on battle end          33.58     30.39
+
+----------------------------------------------------------------------------------------------------
+[1, 0]
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x000000000639df68 MariStone1_psdq7_InoGon_simulator.rb:299 (lambda)>
+Maribel's Level: 11
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        67
+    Max MP                             8        29        45
+    Atk                               47        64        37
+    Def                               45        63        78
+    Agi                               44        18        33
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      31..37    27..31    23..27 ; 攻撃
+      Fury                        38..46    33..38    28..33 ; 武器を振り回す
+      BrutalHit                 *77..*92    67..77   57..*67 ; 痛恨の一撃
+    Gonz
+      Attack                      26..30    22..26    18..22
+      Tail/Claw                   32..37    27..32    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *65..*75    55..65    45..55
+
+Win rate:	61.16%
+* Win
+  Ave. turn count: 23.97
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.93      0.11      0.13
+    Death rate on battle end      32.04%    11.07%     4.15%
+    Ave. HP on battle end          33.59     64.02     58.24
+    Ave. Herb count                 0.21      2.12       NaN
+    Ave. Leaf count                 0.00      0.70      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    30.46%
+        2    69.54%
+    Ave.       1.70
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 19.91
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.43      1.00      1.09
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.17      1.09       NaN
+    Ave. Leaf count                 0.00      0.52      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    47.69%
+        2    52.31%
+    Ave.       1.52
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       3.02%     4.94%
+    Ave. HP on battle end         172.90    154.24
+
+* Both
+  Ave. turn count: 22.40
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.13      0.46      0.50
+    Death rate on battle end      58.43%    45.61%    41.38%
+    Ave. HP on battle end          20.54     39.16     35.62
+    Ave. Herb count                 0.19      1.72       NaN
+    Ave. Leaf count                 0.00      0.63      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    37.15%
+        2    62.85%
+    Ave.       1.63
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      62.34%    63.08%
+    Ave. HP on battle end          67.15     59.90
+
+--------------------------------------------------
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x000000000639df68 MariStone1_psdq7_InoGon_simulator.rb:299 (lambda)>
+Maribel's Level: 10
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        57
+    Max MP                             8        29        39
+    Atk                               47        64        36
+    Def                               45        63        77
+    Agi                               44        18        30
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      31..37    27..31    24..28 ; 攻撃
+      Fury                        38..46    33..38    30..35 ; 武器を振り回す
+      BrutalHit                 *77..*92    67..77  *60..*70 ; 痛恨の一撃
+    Gonz
+      Attack                      26..30    22..26    18..22
+      Tail/Claw                   32..37    27..32    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *65..*75    55..65    45..55
+
+Win rate:	54.53%
+* Win
+  Ave. turn count: 23.72
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.89      0.09      0.23
+    Death rate on battle end      32.45%     9.35%     7.59%
+    Ave. HP on battle end          33.14     64.31     47.94
+    Ave. Herb count                 0.22      1.97       NaN
+    Ave. Leaf count                 0.00      0.72      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    28.06%
+        2    71.94%
+    Ave.       1.72
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 18.72
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.43      1.00      1.17
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.18      1.06       NaN
+    Ave. Leaf count                 0.00      0.60      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    40.10%
+        2    59.90%
+    Ave.       1.60
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       2.72%     4.42%
+    Ave. HP on battle end         178.83    160.65
+
+* Both
+  Ave. turn count: 21.44
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.13      0.51      0.66
+    Death rate on battle end      63.17%    50.57%    49.61%
+    Ave. HP on battle end          18.07     35.07     26.14
+    Ave. Herb count                 0.20      1.55       NaN
+    Ave. Leaf count                 0.00      0.66      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    33.54%
+        2    66.46%
+    Ave.       1.66
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      55.77%    56.54%
+    Ave. HP on battle end          81.32     73.05
+
+----------------------------------------------------------------------------------------------------
+[0, 1]
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x000000000639df68 MariStone1_psdq7_InoGon_simulator.rb:299 (lambda)>
+Maribel's Level: 11
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        67
+    Max MP                             8        29        45
+    Atk                               47        64        37
+    Def                               45        63        78
+    Agi                               44        18        33
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      31..37    27..31    23..27 ; 攻撃
+      Fury                        38..46    33..38    28..33 ; 武器を振り回す
+      BrutalHit                 *77..*92    67..77   57..*67 ; 痛恨の一撃
+    Gonz
+      Attack                      26..30    22..26    18..22
+      Tail/Claw                   32..37    27..32    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *65..*75    55..65    45..55
+
+Win rate:	69.46%
+* Win
+  Ave. turn count: 22.57
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.71      0.35      0.05
+    Death rate on battle end      30.33%     7.06%     5.07%
+    Ave. HP on battle end          35.39     65.94     58.24
+    Ave. Herb count                 0.15      2.21       NaN
+    Ave. Leaf count                 0.00      1.00      0.68
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    31.80%
+        2    68.20%
+    Ave.       1.68
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 19.30
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.38      1.33      1.00
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.17      1.59       NaN
+    Ave. Leaf count                 0.00      1.00      0.71
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    28.98%
+        2    71.02%
+    Ave.       1.71
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       3.53%     5.28%
+    Ave. HP on battle end         159.82    144.51
+
+* Both
+  Ave. turn count: 21.57
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.91      0.65      0.34
+    Death rate on battle end      51.61%    35.44%    34.07%
+    Ave. HP on battle end          24.58     45.80     40.45
+    Ave. Herb count                 0.16      2.02       NaN
+    Ave. Leaf count                 0.00      1.00      0.69
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    30.94%
+        2    69.06%
+    Ave.       1.69
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      70.54%    71.07%
+    Ave. HP on battle end          48.81     44.14
+
+--------------------------------------------------
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x000000000639df68 MariStone1_psdq7_InoGon_simulator.rb:299 (lambda)>
+Maribel's Level: 10
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        57
+    Max MP                             8        29        39
+    Atk                               47        64        36
+    Def                               45        63        77
+    Agi                               44        18        30
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      31..37    27..31    24..28 ; 攻撃
+      Fury                        38..46    33..38    30..35 ; 武器を振り回す
+      BrutalHit                 *77..*92    67..77  *60..*70 ; 痛恨の一撃
+    Gonz
+      Attack                      26..30    22..26    18..22
+      Tail/Claw                   32..37    27..32    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *65..*75    55..65    45..55
+
+Win rate:	58.41%
+* Win
+  Ave. turn count: 22.24
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.68      0.33      0.09
+    Death rate on battle end      28.80%     5.88%     9.16%
+    Ave. HP on battle end          35.77     65.90     47.50
+    Ave. Herb count                 0.15      2.04       NaN
+    Ave. Leaf count                 0.00      1.00      0.66
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    33.60%
+        2    66.40%
+    Ave.       1.66
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 17.51
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.31      1.27      1.00
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.19      1.47       NaN
+    Ave. Leaf count                 0.00      1.00      0.58
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    41.60%
+        2    58.40%
+    Ave.       1.58
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       2.91%     4.28%
+    Ave. HP on battle end         177.02    160.65
+
+* Both
+  Ave. turn count: 20.28
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.94      0.72      0.47
+    Death rate on battle end      58.41%    45.02%    46.94%
+    Ave. HP on battle end          20.90     38.49     27.74
+    Ave. Herb count                 0.17      1.80       NaN
+    Ave. Leaf count                 0.00      1.00      0.63
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        1    36.93%
+        2    63.07%
+    Ave.       1.63
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      59.62%    60.19%
+    Ave. HP on battle end          73.62     66.82
+
+----------------------------------------------------------------------------------------------------
+[0, 0]
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x000000000639df68 MariStone1_psdq7_InoGon_simulator.rb:299 (lambda)>
+Maribel's Level: 11
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        67
+    Max MP                             8        29        45
+    Atk                               47        64        37
+    Def                               45        63        78
+    Agi                               44        18        33
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      31..37    27..31    23..27 ; 攻撃
+      Fury                        38..46    33..38    28..33 ; 武器を振り回す
+      BrutalHit                 *77..*92    67..77   57..*67 ; 痛恨の一撃
+    Gonz
+      Attack                      26..30    22..26    18..22
+      Tail/Claw                   32..37    27..32    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *65..*75    55..65    45..55
+
+Win rate:	43.40%
+* Win
+  Ave. turn count: 24.05
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.60      0.12      0.06
+    Death rate on battle end      60.00%    12.12%     6.18%
+    Ave. HP on battle end          19.68     61.25     55.23
+    Ave. Herb count                 0.17      1.90       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 18.04
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.00      1.00      1.00
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.12      1.02       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       2.39%     3.62%
+    Ave. HP on battle end         183.97    165.35
+
+* Both
+  Ave. turn count: 20.65
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.83      0.62      0.59
+    Death rate on battle end      82.64%    61.86%    59.28%
+    Ave. HP on battle end           8.54     26.58     23.97
+    Ave. Herb count                 0.14      1.40       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      44.75%    45.45%
+    Ave. HP on battle end         104.13     93.59
+
+--------------------------------------------------
+N: 100000
+Log Timing: none
+
+Party: #<Proc:0x000000000639df68 MariStone1_psdq7_InoGon_simulator.rb:299 (lambda)>
+Maribel's Level: 10
+Seed Type: rand
+
+* Party
+                                    No.1      No.2      No.3
+  Status
+    Max HP                            59        81        57
+    Max MP                             8        29        39
+    Atk                               47        64        36
+    Def                               45        63        77
+    Agi                               44        18        30
+    Eva                            3.10%     3.10%    19.25% ; みかわし率
+  Item
+    Herb                               3         7  Infinity ; 薬草
+    Leaf                               0         1         1 ; 世界樹の葉
+  Damage Range ; 被ダメージ範囲("*"つきは最大HPでも耐えない)
+    Inopp
+      Attack                      31..37    27..31    24..28 ; 攻撃
+      Fury                        38..46    33..38    30..35 ; 武器を振り回す
+      BrutalHit                 *77..*92    67..77  *60..*70 ; 痛恨の一撃
+    Gonz
+      Attack                      26..30    22..26    18..22
+      Tail/Claw                   32..37    27..32    22..27 ; 尻尾/爪できりさく
+      BrutalHit                 *65..*75    55..65    45..55
+
+Win rate:	34.96%
+* Win
+  Ave. turn count: 23.54
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.58      0.10      0.11
+    Death rate on battle end      57.60%     9.75%    10.70%
+    Ave. HP on battle end          20.64     61.82     45.17
+    Ave. Herb count                 0.18      1.72       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end     100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00
+
+* Lose
+  Ave. turn count: 16.63
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                1.00      1.00      1.00
+    Death rate on battle end     100.00%   100.00%   100.00%
+    Ave. HP on battle end           0.00      0.00      0.00
+    Ave. Herb count                 0.14      0.97       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end       2.06%     3.14%
+    Ave. HP on battle end         195.96    177.03
+
+* Both
+  Ave. turn count: 19.04
+  Party:
+                                    No.1      No.2      No.3
+    Ave. death count                0.85      0.68      0.69
+    Death rate on battle end      85.18%    68.44%    68.78%
+    Ave. HP on battle end           7.22     21.62     15.79
+    Ave. Herb count                 0.15      1.24       NaN
+    Ave. Leaf count                 0.00      1.00      1.00
+  Distribution of Leaf count: ; 世界樹の葉消費数の分布
+        2   100.00%
+    Ave.       2.00
+  Troop:
+                                    No.1      No.2
+    Death rate on battle end      36.30%    37.01%
+    Ave. HP on battle end         127.44    115.14
+
+----------------------------------------------------------------------------------------------------
