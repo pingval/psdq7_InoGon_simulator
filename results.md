@@ -1,14 +1,14 @@
 <!-- TOC depthFrom:1 depthTo:3 insertAnchor:true orderedList:false -->
 
 - [ステータス(期待値)](#ステータス期待値)
-  - [マリベル石#1](#マリベル石1)
+  - [[マリベル石#1](./lib/Party_MariStone1.rb)](#マリベル石1libparty_maristone1rb)
   - [マリベル石#2](#マリベル石2)
   - [ガボ石#1](#ガボ石1)
   - [ガボ石#2](#ガボ石2)
 - [シミュレーション結果](#シミュレーション結果)
   - [主:貝帽・ガ:尖帽](#主貝帽・ガ尖帽)
   - [主:鉄兜・ガ:貝帽](#主鉄兜・ガ貝帽)
-  - [マリベル石#1](#マリベル石1-1)
+  - [マリベル石#1](#マリベル石1)
     - [主:貝帽・ガ:尖帽](#主貝帽・ガ尖帽-1)
     - [主:鉄兜・ガ:貝帽](#主鉄兜・ガ貝帽-1)
   - [マリベル石#2](#マリベル石2-1)
@@ -35,8 +35,8 @@
   <dd>1/6</dd>
 </dl>
 
-<a id="markdown-マリベル石1" name="マリベル石1"></a>
-## マリベル石#1
+<a id="markdown-マリベル石1libparty_maristone1rb" name="マリベル石1libparty_maristone1rb"></a>
+## [マリベル石#1](./lib/Party_MariStone1.rb)
 
 [Party_MariStone1](./lib/Party_MariStone1.rb)
 
@@ -211,7 +211,7 @@
 | [ガボ石#2](./lib/Party_GaboStone2.rb) | 11 | 86.44% | 21.87 | 0.82 |
 
 
-<a id="markdown-マリベル石1-1" name="マリベル石1-1"></a>
+<a id="markdown-マリベル石1" name="マリベル石1"></a>
 ## マリベル石#1
 
 10万回試行
