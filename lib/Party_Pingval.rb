@@ -20,39 +20,68 @@ class Game_Party_Pingval < Game_Party
 
     ab_first_herb_dmg = 10
 
+    # 予約葉っぱ有効
+    lookahead_leaf_enabled = true
+
     case [a.alive?, b.alive?, c.alive?]
     when [ true,  true,  true]
-      # 3列目
-      damaged_actor = alive_actors.max_by{|actor| actor.dmg }
-      if damaged_actor.dmg > abc_first_herb_dmg
-        c.set(:Herb, damaged_actor)
-      elsif !c.has?(:Leaf)
-        c.set(:Herb, b)
-      else
-        c.set(:Herb, a)
-      end
-      # 2列目
-      if b.hp < abc_b_guard_hp
-        b.set(:Guard)
-      else
-        damaged_actor_hp = damaged_actor.hp
-        damaged_actor_dmg = damaged_actor.dmg
-        begin
-          # 石対象を一時的に回復して、2列目の回復対象を選択
-          damaged_actor.hp += 35
-          damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
-          if damaged_actor2.dmg > abc_second_herb_dmg && b.has?(:Herb)
-            b.set(:Herb, damaged_actor2)
-          elsif ((b.blind? && damaged_actor == b && damaged_actor_dmg > 0) ||
-                 (!c.has?(:Leaf) && damaged_actor == b && damaged_actor_dmg > 0))
+      # 1列目が瀕死かつ葉っぱを使ってよさそうな場合、予約葉っぱ
+      cond_b = b.has?(:Leaf) && b.safe?
+      cond_c = c.has?(:Leaf)
+      if lookahead_leaf_enabled && a.dying? && (cond_b || cond_c)
+        damaged_actor = [b, c].max_by{|actor| actor.dmg }
+        if cond_b
+          b.set(:Leaf, a)
+          if damaged_actor.dmg > abc_first_herb_dmg
+            c.set(:Herb, damaged_actor)
+          else
+            c.set(:Herb, b)
+          end
+        else
+          c.set(:Leaf, a)
+          if b.hp < abc_b_guard_hp
+            b.set(:Guard)
+          elsif damaged_actor.dmg > abc_second_herb_dmg && b.has?(:Herb)
+            b.set(:Herb, damaged_actor)
+          elsif b.blind? && !b.safe?
             b.set(:Guard)
           else
             b.set(:Boomerang)
           end
-        ensure
-          damaged_actor.hp = damaged_actor_hp
         end
-      end
+      else
+        # 3列目
+        damaged_actor = alive_actors.max_by{|actor| actor.dmg }
+        if damaged_actor.dmg > abc_first_herb_dmg
+          c.set(:Herb, damaged_actor)
+        elsif !c.has?(:Leaf)
+          c.set(:Herb, b)
+        else
+          c.set(:Herb, a)
+        end
+        # 2列目
+        if b.hp < abc_b_guard_hp
+          b.set(:Guard)
+        else
+          damaged_actor_hp = damaged_actor.hp
+          damaged_actor_dmg = damaged_actor.dmg
+          begin
+            # 石対象を一時的に回復して、2列目の回復対象を選択
+            damaged_actor.hp += 35
+            damaged_actor2 = alive_actors.max_by{|actor| actor.dmg }
+            if damaged_actor2.dmg > abc_second_herb_dmg && b.has?(:Herb)
+              b.set(:Herb, damaged_actor2)
+            elsif ((b.blind? && damaged_actor == b && damaged_actor_dmg > 0) ||
+                  (!c.has?(:Leaf) && damaged_actor == b && damaged_actor_dmg > 0))
+              b.set(:Guard)
+            else
+              b.set(:Boomerang)
+            end
+          ensure
+            damaged_actor.hp = damaged_actor_hp
+          end
+        end
+        end
       # 1列目
       if a.dying?
         a.has?(:Herb) ? a.set(:Herb, a) : a.set(:Attack, a.opponents_unit.min_hp_member)
