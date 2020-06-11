@@ -20,11 +20,16 @@ Lib_Require_Order = %w[
   Variables
   Party_Panda
   Party_Pingval
+  Party_Pingval_GaboAttack
   Party_MariStone1
   Party_MariStone2
   Party_GaboStone1
   Party_GaboStone2
   Party_GaboStone3
+  Party_GaboStone4
+  Party_Ketta1249
+  Party_SteelKasimuu
+  Party_Drisnpi1250
 ]
 
 RGSS3_Require_Order.each{|basename|
@@ -262,7 +267,7 @@ end
 $option = {
   N: 10000,
   log_timing: :none,
-  party: Party_MariStone1,
+  party: Party_Ketta1249_GA,
   mari_lv11: false,
   seed_type: :rand,
   callback: ->{
