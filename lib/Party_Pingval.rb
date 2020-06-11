@@ -119,7 +119,8 @@ class Game_Party_Pingval < Game_Party
           c.set(:Herb, b)
         end
 
-        if b.hp < bc_b_guard_hp
+        # 2列目が葉っぱを持っている場合、使える状況になるまで防御
+        if b.hp < bc_b_guard_hp || b.has?(:Leaf)
           b.set(:Guard)
         else
           damaged_actor_hp = damaged_actor.hp
