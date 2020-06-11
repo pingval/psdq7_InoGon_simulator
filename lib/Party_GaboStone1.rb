@@ -70,3 +70,11 @@ Party_GaboStone1 = ->seed_type: :rand, mari_lv11: false{
 
   Game_Party_Pingval.new(mari, hero, gabo, npc_Kasim)
 }
+
+Party_GaboStone1_GA = ->seed_type: :rand, mari_lv11: false{
+  hero = hero_GaboStone1(seed_type: seed_type)
+  mari = mari_GaboStone1(seed_type: seed_type, mari_lv11: mari_lv11)
+  gabo = gabo_GaboStone1(seed_type: seed_type)
+
+  Game_Party_Pingval_GaboAttack.new(mari, hero, gabo, npc_Kasim)
+}

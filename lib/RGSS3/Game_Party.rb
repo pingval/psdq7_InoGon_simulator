@@ -157,8 +157,8 @@ class Game_Party < Game_Unit
         if item == :Herb && actor.current_action.targets[0].dead?
           raise "%s's Herb to dead actor." % [actor.name]
         end
-        # 生存者に対する葉っぱ(先読み葉っぱの可能性を考えていない)
-        if item == :Leaf && actor.current_action.targets[0].alive?
+        # 瀕死状態以外の生存者に対する葉っぱ
+        if item == :Leaf && actor.current_action.targets[0].alive? && !actor.current_action.targets[0].dying?
           raise "%s's Leaf to alive actor." % [actor.name]
         end
       rescue => e
