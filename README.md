@@ -32,9 +32,42 @@ PS版DQ7RTAにおいて最も勝率が低いとされている戦闘であるイ
 
 ## 使い方
 
-`Ruby psdq7_InoGon_simulator.rb`
-
-$optionをいろいろ書き換えていろいろやる。
+```
+>ruby psdq7_InoGon_simulator.rb
+Usage: psdq7_InoGon_simulator options
+    -n, --number NUMBER              試行回数
+    -l, --log_timing TIMING          none                     ログを出力しない(デフォルト)
+                                     battle                   戦闘ごとに出力
+                                     turn                     1ターンごとに出力(1回試行)
+                                     action                   行動ごとに出力(1回試行)
+                                     result                   行動の結果ごとに出力(1回試行)
+    -p, --party PARTY                Party_MariStone1         マリベル石#1(デフォルト)
+                                     Party_MariStone2         マリベル石#2
+                                     Party_GaboStone1         ガボ石#1・ガボ殴らない
+                                     Party_GaboStone1_GA      ガボ石#1・ガボ殴る
+                                     Party_GaboStone2         ガボ石#2・ガボ殴らない
+                                     Party_GaboStone2_GA      ガボ石#2・ガボ殴る
+                                     Party_GaboStone3         ガボ石#3・ガボ殴らない
+                                     Party_GaboStone3_GA      ガボ石#3・ガボ殴る
+                                     Party_GaboStone4         ガボ石#4・ガボ殴らない
+                                     Party_GaboStone4_GA      ガボ石#4・ガボ殴る
+                                     Party_Ketta1249          けった氏12:49:48・ガボ殴らない
+                                     Party_Ketta1249_GA       けった氏12:49:48・ガボ殴る
+                                     Party_Drisnpi1250        奴隷先輩氏12:50:02・ガボ殴らない
+                                     Party_Drisnpi1250_GA     奴隷先輩氏12:50:02・ガボ殴る
+                                     Party_SteelKasimuu       steel氏カシムゥ！・ガボ殴らない
+                                     Party_SteelKasimuu_GA    steel氏カシムゥ！・ガボ殴る
+    -m, --mari_lv11                  マリベルLv11
+    -s, --seed_type SEED_TYPE        rand                     種の上昇値ランダム(デフォルト)
+                                     min                      最小値
+                                     max                      最大値
+                                     ave                      平均値
+e.g.
+・けった氏12:49:48戦力(ガボ殴り)・種の上昇値平均・最も細かくログ出力:
+    psdq7_InoGon_simulator -pParty_Ketta1249_GA -save -lresult
+・マリベル石#1・マリベルLv11・100万回試行:
+    psdq7_InoGon_simulator -pParty_MariStone1 -m -n1000000
+```
 
 - [シミュレーション結果](results.md)
 

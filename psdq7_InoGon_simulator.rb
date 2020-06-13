@@ -1,3 +1,8 @@
+require "optparse"
+
+# 引数ないならヘルプ表示
+ARGV.push("--help") if ARGV.empty?
+
 $>.sync = true
 
 Lib_Dir = "./lib"
@@ -42,10 +47,11 @@ Lib_Require_Order.each{|basename|
 }
 
 # ログ
+LOG_TIMINGS = %i[none battle turn action result]
+
 def log(str, timing)
-  tbl = %i[none battle turn action result]
-  idx = tbl.index(timing)
-  return if tbl.index($option[:log_timing]) < idx
+  idx = LOG_TIMINGS.index(timing)
+  return if LOG_TIMINGS.index($option[:log_timing]) < idx
   pre = idx < 1 ? "" : "  " * (idx - 1)
   puts pre + str
 end
@@ -202,7 +208,7 @@ def main
   
   win = 0
   # ログを出力するなら勝手にN=1に変更
-  if $option[:log_timing] != :none
+  if !%i[battle, none].include?($option[:log_timing])
     $option[:N] = 1
   end
 
@@ -259,22 +265,85 @@ def main
   end
 end
 
-# if ARGV.size < 1
-#   puts "Usage: #{File.basename(__FILE__, ".*")} party [N=100000]"
-# end
-
 # log_timing: none, battle, turn, action, result
 $option = {
-  N: 10000,
+  N: 1000,
   log_timing: :none,
-  party: Party_Ketta1249_GA,
+  party: Party_MariStone1,
   mari_lv11: false,
   seed_type: :rand,
-  callback: ->{
-    # a, b, c = $game_party.actors
-    # b.inventory[:Leaf] = 0
-    # c.inventory[:Leaf] = 0
-  },
+  # callback: ->{
+  #   # a, b, c = $game_party.actors
+  #   # a.hp = 0
+  #   # # b.hp = rand(30..b.mhp)
+  #   # b.inventory[:Leaf] = 0
+  #   # # c.hp = rand(30..c.mhp)
+  #   # c.inventory[:Leaf] = 0
+  # },
+}
+
+OptionParser.new {|opt|
+  log_timing_tbl = {
+    none: "ログを出力しない(デフォルト)",
+    battle: "戦闘ごとに出力",
+    turn: "1ターンごとに出力(1回試行)",
+    action: "行動ごとに出力(1回試行)",
+    result: "行動の結果ごとに出力(1回試行)"
+  }
+  
+  seed_type_tbl = {
+    rand: "種の上昇値ランダム(デフォルト)",
+    min: "最小値",
+    max: "最大値",
+    ave: "平均値",
+  }
+  
+  party_tbl = {
+    Party_MariStone1: "マリベル石#1(デフォルト)",
+    Party_MariStone2: "マリベル石#2",
+    Party_GaboStone1: "ガボ石#1・ガボ殴らない",
+    Party_GaboStone1_GA: "ガボ石#1・ガボ殴る",
+    Party_GaboStone2: "ガボ石#2・ガボ殴らない",
+    Party_GaboStone2_GA: "ガボ石#2・ガボ殴る",
+    Party_GaboStone3: "ガボ石#3・ガボ殴らない",
+    Party_GaboStone3_GA: "ガボ石#3・ガボ殴る",
+    Party_GaboStone4: "ガボ石#4・ガボ殴らない",
+    Party_GaboStone4_GA: "ガボ石#4・ガボ殴る",
+    Party_Ketta1249: "けった氏12:49:48・ガボ殴らない",
+    Party_Ketta1249_GA: "けった氏12:49:48・ガボ殴る",
+    Party_Drisnpi1250: "奴隷先輩氏12:50:02・ガボ殴らない",
+    Party_Drisnpi1250_GA: "奴隷先輩氏12:50:02・ガボ殴る",
+    Party_SteelKasimuu: "steel氏カシムゥ！・ガボ殴らない",
+    Party_SteelKasimuu_GA: "steel氏カシムゥ！・ガボ殴る",
+  }
+  
+  opt.banner = "Usage: #{File.basename(__FILE__, ".*")} options"
+  opt.version = "2020/06/14"
+  
+  opt.on("-n V", "--number NUMBER", Integer, "試行回数") {|v|
+    $option[:N] = v
+  }
+  opt.on("-l V", "--log_timing TIMING", /\A(?:#{log_timing_tbl.keys*'|'})\Z/, *log_timing_tbl.map{|k, v| "%-25s%s" % [k, v]}) {|v|
+    $option[:log_timing] = v.intern
+  }
+  opt.on("-p V", "--party PARTY", /\A(?:#{party_tbl.keys*'|'})\Z/, *party_tbl.map{|k, v| "%-25s%s" % [k, v]}) {|v|
+    $option[:party] = eval v
+  }
+  opt.on("-m", "--mari_lv11", "マリベルLv11") {|v|
+    $option[:mari_lv11] = true
+  }
+  opt.on("-s V", "--seed_type SEED_TYPE", /\A(?:#{seed_type_tbl.keys*'|'})\Z/, *seed_type_tbl.map{|k, v| "%-25s%s" % [k, v]}) {|v|
+    $option[:seed_type] = v.intern
+  }
+  opt.on_tail(<<__TAIL__
+e.g.
+・けった氏12:49:48戦力(ガボ殴り)・種の上昇値平均・最も細かくログ出力:
+    #{File.basename(__FILE__, ".*")} -pParty_Ketta1249_GA -save -lresult
+・マリベル石#1・マリベルLv11・100万回試行:
+    #{File.basename(__FILE__, ".*")} -pParty_MariStone1 -m -n1000000
+__TAIL__
+  )
+  opt.permute!(ARGV)
 }
 
 main()
