@@ -1,7 +1,7 @@
 # Game_Party_Pingval を元に、
 # - 全員がほぼ満タンの場合、3列目も殴る
 # - 「2列目がマヌーサ状態・3列目がマヌーサ状態でない・2列目が薬草を所持」の場合、2列目が回復し3列目が殴る。
-class Game_Party_GaboAttack < Game_Party
+class Game_Party_Pingval_GaboAttack < Game_Party
   def set_actions
     a, b, c = actors
 

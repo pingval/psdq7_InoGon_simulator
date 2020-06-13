@@ -8,15 +8,15 @@ def hero_GaboStone3(seed_type: :rand)
     equipments: {
       # 刃ブ、スピ
       atk: 26 + 1,
-      # 鱗鎧、鉄盾、貝帽
+      # 派服、鉄盾、貝帽
       def: 28 + 13 + 8,
-      # # 鱗鎧、鉄盾、鉄兜
-      # def: 15 + 13 + 16,
+      # # 派服、鉄盾、鉄兜
+      # def: 28 + 13 + 16,
       agi: 0,
       eva: 0,
     },
-    seeds: { mhp: 2, mmp: 0, atk: 6, def: 2, agi: 0, },
-    inventory: { Herb: 7, Leaf: 1 },
+    seeds: { mhp: 2, mmp: 0, atk: 5, def: 2, agi: 0, },
+    inventory: { Herb: 6, Leaf: 1 },
   )
 end
 
@@ -36,7 +36,7 @@ def mari_GaboStone3(seed_type: :rand, mari_lv11: false)
       eva: 1r/6,
     },
     seeds: { mhp: 1, mmp: 1, atk: 0, def: 2, agi: 0, },
-    inventory: { Herb: 7, Leaf: 0 },
+    inventory: { Herb: 8, Leaf: 0 },
   )
 end
 
@@ -47,10 +47,10 @@ def gabo_GaboStone3(seed_type: :rand)
     seed_type: seed_type,
 
     equipments: {
-      atk: 21, # 鉄爪
+      # atk: 21, # 鉄爪
       # atk: 26, # 刃ブ
-      # atk: 15, # ブメ
-      # 派服、キ盾、尖帽、祈輪
+      atk: 15, # ブメ
+      # 毛マ、キ盾、尖帽、祈輪
       def: 18 + 9 + 5 + 5,
       # # 派服、キ盾、貝帽、祈輪
       # def: 28 + 9 + 8 + 5,

@@ -207,7 +207,7 @@ def hero_Panda(seed_type: :rand)
       eva: 0,
     },
     seeds: { mhp: 2, mmp: 0, atk: 6, def: 2, agi: 0, },
-    inventory: { Herb: 7, Leaf: 1 },
+    inventory: { Herb: 6, Leaf: 1 },
   )
 end
 

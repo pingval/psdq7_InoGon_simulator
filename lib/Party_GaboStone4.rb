@@ -18,7 +18,7 @@ def hero_GaboStone4(seed_type: :rand)
       eva: 0,
     },
     seeds: { mhp: 2, mmp: 0, atk: 5, def: 3, agi: 0, },
-    inventory: { Herb: 7, Leaf: 1 },
+    inventory: { Herb: 6, Leaf: 1 },
   )
 end
 
@@ -38,7 +38,7 @@ def mari_GaboStone4(seed_type: :rand, mari_lv11: false)
       eva: 0,
     },
     seeds: { mhp: 1, mmp: 1, atk: 0, def: 1, agi: 0, },
-    inventory: { Herb: 7, Leaf: 0 },
+    inventory: { Herb: 8, Leaf: 0 },
   )
 end
 

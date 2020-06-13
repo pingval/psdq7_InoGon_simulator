@@ -1,4 +1,4 @@
-<!-- TOC depthFrom:1 depthTo:3 insertAnchor:true orderedList:false -->
+<!-- TOC depthFrom:1 depthTo:3 insertAnchor:false orderedList:false -->
 
 - [PS版DQ7 イノゴン戦シミュレータ](#ps版dq7-イノゴン戦シミュレータ)
   - [使い方](#使い方)
@@ -10,17 +10,26 @@
 
 <!-- /TOC -->
 
-<a id="markdown-ps版dq7-イノゴン戦シミュレータ" name="ps版dq7-イノゴン戦シミュレータ"></a>
 # PS版DQ7 イノゴン戦シミュレータ
 
 PS版DQ7RTAにおいて最も勝率が低いとされている戦闘であるイノゴン戦の勝率を楽して見極めるために**今更**作ったやつ。[RGPツクールVX Ace](https://store.steampowered.com/app/220700/RPG_Maker_VX_Ace/)のスクリプトRGSS3を元にしています。
 
 現在対応しているのは、
-- [腹黒パンダ氏の戦術](https://harapan.exblog.jp/15510551/)([装備種配分](https://github.com/pingval/DQ7/raw/master/psdq7-status.zip))
-- [自分の戦術](https://github.com/pingval/DQ7/blob/master/pingval-psdq7-Aira183-chart.txt#L1649)([装備種配分](https://github.com/pingval/DQ7/raw/master/psdq7-status.zip))
-- ガボ石戦術(刃ブなし)
+- 戦術
+  - [腹黒パンダ氏の戦術](./lib/Party_Panda.rb)
+  - [自分の戦術](./lib/Party_Pingval.rb)
+  - [自分の石役ガボ殴り戦術](./lib/Party_Pingval_GaboAttack.rb)
+- 戦力
+  - [マリベル石#1](./lib/Party_MariStone1.rb)
+  - [マリベル石#2](./lib/Party_MariStone2.rb)
+  - [ガボ石#1](./lib/Party_GaboStone1.rb)
+  - [ガボ石#2](./lib/Party_GaboStone2.rb)
+  - [ガボ石#3](./lib/Party_GaboStone3.rb)
+  - [ガボ石#4](./lib/Party_GaboStone4.rb)
+  - [けった氏の12:49:48](./lib/Party_Ketta1249.rb)
+  - [奴隷先輩氏の12:50:02](./lib/Party_Drisnpi1250.rb)
+  - [steel氏のカシムゥ！](./lib/Party_SteelKasimuu.rb)
 
-<a id="markdown-使い方" name="使い方"></a>
 ## 使い方
 
 `Ruby psdq7_InoGon_simulator.rb`
@@ -29,10 +38,8 @@ $optionをいろいろ書き換えていろいろやる。
 
 - [シミュレーション結果](results.md)
 
-<a id="markdown-出力の例" name="出力の例"></a>
 ## 出力の例
 
-<a id="markdown-optionn--100000" name="optionn--100000"></a>
 ### `$option[:N] = 100000`
 100000回試行。
 
@@ -124,7 +131,6 @@ Win rate:	77.62%
     Death rate on battle end      78.50%    78.88%
     Ave. HP on battle end          33.58     30.39
 ```
-<a id="markdown-optionlog_timing--turn" name="optionlog_timing--turn"></a>
 ### `$option[:log_timing] = :turn`
 戦闘ログを1Tごとに出力する。
 
@@ -197,7 +203,6 @@ Seed Type: rand
     Leaf                         (0-0=)0   (1-0=)1   (1-1=)0 ; 世界樹の葉
 ```
 
-<a id="markdown-optionlog_timing--result" name="optionlog_timing--result"></a>
 ### `$option[:log_timing] = :result`
 戦闘ログを最も詳しく出力する。
 
@@ -318,8 +323,8 @@ Lose!:      イノ387/440 |      ゴン326/400 | [死 ]マ  0/ 53 | [死 ]主  0
     Leaf                         (0-0=)0   (1-0=)1   (1-0=)1 ; 世界樹の葉
 ```
 
-<a id="markdown-todo" name="todo"></a>
 ## ToDo
+- [ ] 使い方の改善(コマンドラインオプション)
 - [ ] 戦術をちゃんとする
   - [x] ガボ石戦術
     - [x] ガボ殴り
