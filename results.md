@@ -19,8 +19,9 @@
 
 <!-- /TOC -->
 
-[古いやつ](./old_results.md)
+----
 
+[古いやつ](./old_results.md)
 
 # ステータス(期待値)
 
@@ -349,8 +350,9 @@
       BrutalHit                   50..60    55..65   52..*62
 ```
 
-
 # シミュレーション結果
+
+100万回試行。
 
 - ガボ殴り戦術はターン数は縮むが、勝率は武器がブーメランの場合2%程度下がる。刃のブーメランならコンマ数%上がる。
   - ブーメランでもガボ石#2,3では勝率がコンマ数%しか落ちていないのは、先頭のマリベルに身かわしの服を装備させており、多少回復をサボっても耐えてくれるからだろう。
@@ -386,8 +388,8 @@
 | [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 10 | 71.02% | 20.59 | 1.24 | [Ketta1249GA_mari10_1M.txt](./log/Ketta1249GA_mari10_1M.txt) |
 | [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 10 | 62.99% | 23.09 | 1.23 | [Drisnpi1250_mari10_1M.txt](./log/Drisnpi1250_mari10_1M.txt) |
 | [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 10 | 63.70% | 20.47 | 1.27 | [Drisnpi1250GA_mari10_1M.txt](./log/Drisnpi1250GA_mari10_1M.txt) |
-| [steel氏のカシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 10 | 76.77% | 22.97 | 1.09 | [SteelKasimuu_mari10_1M.txt](./log/SteelKasimuu_mari10_1M.txt) |
-| [steel氏のカシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 10 | 75.06% | 21.30 | 1.17 | [SteelKasimuuGA_mari10_1M.txt](./log/SteelKasimuuGA_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 10 | 76.77% | 22.97 | 1.09 | [SteelKasimuu_mari10_1M.txt](./log/SteelKasimuu_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 10 | 75.06% | 21.30 | 1.17 | [SteelKasimuuGA_mari10_1M.txt](./log/SteelKasimuuGA_mari10_1M.txt) |
 
 ## マリベルLv11
 
