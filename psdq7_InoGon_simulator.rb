@@ -337,10 +337,12 @@ OptionParser.new {|opt|
   }
   opt.on_tail(<<__TAIL__
 e.g.
-・けった氏12:49:48戦力(ガボ殴り)・種の上昇値平均・最も細かくログ出力:
-    #{File.basename(__FILE__, ".*")} -pKetta1249_GA -save -lresult
 ・マリベル石#1・マリベルLv11・100万回試行:
     #{File.basename(__FILE__, ".*")} -pMariStone1 -m -n1000000
+・ガボ石#1(ガボ殴らない)・1ターンごとにログ出力:
+    #{File.basename(__FILE__, ".*")} -pGaboStone1 -lturn
+・けった氏12:49:48戦力(ガボ殴り)・種の上昇値平均・最も細かくログ出力:
+    #{File.basename(__FILE__, ".*")} -pKetta1249_GA -save -lresult
 __TAIL__
   )
   opt.permute!(ARGV)
