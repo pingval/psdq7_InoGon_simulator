@@ -299,22 +299,22 @@ OptionParser.new {|opt|
   }
   
   party_tbl = {
-    Party_MariStone1: "マリベル石#1(デフォルト)",
-    Party_MariStone2: "マリベル石#2",
-    Party_GaboStone1: "ガボ石#1・ガボ殴らない",
-    Party_GaboStone1_GA: "ガボ石#1・ガボ殴る",
-    Party_GaboStone2: "ガボ石#2・ガボ殴らない",
-    Party_GaboStone2_GA: "ガボ石#2・ガボ殴る",
-    Party_GaboStone3: "ガボ石#3・ガボ殴らない",
-    Party_GaboStone3_GA: "ガボ石#3・ガボ殴る",
-    Party_GaboStone4: "ガボ石#4・ガボ殴らない",
-    Party_GaboStone4_GA: "ガボ石#4・ガボ殴る",
-    Party_Ketta1249: "けった氏12:49:48・ガボ殴らない",
-    Party_Ketta1249_GA: "けった氏12:49:48・ガボ殴る",
-    Party_Drisnpi1250: "奴隷先輩氏12:50:02・ガボ殴らない",
-    Party_Drisnpi1250_GA: "奴隷先輩氏12:50:02・ガボ殴る",
-    Party_SteelKasimuu: "steel氏カシムゥ！・ガボ殴らない",
-    Party_SteelKasimuu_GA: "steel氏カシムゥ！・ガボ殴る",
+    MariStone1: "マリベル石#1(デフォルト)",
+    MariStone2: "マリベル石#2",
+    GaboStone1: "ガボ石#1・ガボ殴らない",
+    GaboStone1_GA: "ガボ石#1・ガボ殴る",
+    GaboStone2: "ガボ石#2・ガボ殴らない",
+    GaboStone2_GA: "ガボ石#2・ガボ殴る",
+    GaboStone3: "ガボ石#3・ガボ殴らない",
+    GaboStone3_GA: "ガボ石#3・ガボ殴る",
+    GaboStone4: "ガボ石#4・ガボ殴らない",
+    GaboStone4_GA: "ガボ石#4・ガボ殴る",
+    Ketta1249: "けった氏12:49:48・ガボ殴らない",
+    Ketta1249_GA: "けった氏12:49:48・ガボ殴る",
+    Drisnpi1250: "奴隷先輩氏12:50:02・ガボ殴らない",
+    Drisnpi1250_GA: "奴隷先輩氏12:50:02・ガボ殴る",
+    SteelKasimuu: "steel氏カシムゥ！・ガボ殴らない",
+    SteelKasimuu_GA: "steel氏カシムゥ！・ガボ殴る",
   }
   
   opt.banner = "Usage: #{File.basename(__FILE__, ".*")} options"
@@ -323,24 +323,24 @@ OptionParser.new {|opt|
   opt.on("-n V", "--number NUMBER", Integer, "試行回数") {|v|
     $option[:N] = v
   }
-  opt.on("-l V", "--log_timing TIMING", /\A(?:#{log_timing_tbl.keys*'|'})\Z/, *log_timing_tbl.map{|k, v| "%-25s%s" % [k, v]}) {|v|
+  opt.on("-l V", "--log_timing TIMING", /\A(?:#{log_timing_tbl.keys*'|'})\Z/, *log_timing_tbl.map{|k, v| "%-20s%s" % [k, v]}) {|v|
     $option[:log_timing] = v.intern
   }
-  opt.on("-p V", "--party PARTY", /\A(?:#{party_tbl.keys*'|'})\Z/, *party_tbl.map{|k, v| "%-25s%s" % [k, v]}) {|v|
-    $option[:party] = eval v
+  opt.on("-p V", "--party PARTY", /\A(?:#{party_tbl.keys*'|'})\Z/, *party_tbl.map{|k, v| "%-20s%s" % [k, v]}) {|v|
+    $option[:party] = eval "Party_#{v}"
   }
   opt.on("-m", "--mari_lv11", "マリベルLv11") {|v|
     $option[:mari_lv11] = true
   }
-  opt.on("-s V", "--seed_type SEED_TYPE", /\A(?:#{seed_type_tbl.keys*'|'})\Z/, *seed_type_tbl.map{|k, v| "%-25s%s" % [k, v]}) {|v|
+  opt.on("-s V", "--seed_type SEED_TYPE", /\A(?:#{seed_type_tbl.keys*'|'})\Z/, *seed_type_tbl.map{|k, v| "%-20s%s" % [k, v]}) {|v|
     $option[:seed_type] = v.intern
   }
   opt.on_tail(<<__TAIL__
 e.g.
 ・けった氏12:49:48戦力(ガボ殴り)・種の上昇値平均・最も細かくログ出力:
-    #{File.basename(__FILE__, ".*")} -pParty_Ketta1249_GA -save -lresult
+    #{File.basename(__FILE__, ".*")} -pKetta1249_GA -save -lresult
 ・マリベル石#1・マリベルLv11・100万回試行:
-    #{File.basename(__FILE__, ".*")} -pParty_MariStone1 -m -n1000000
+    #{File.basename(__FILE__, ".*")} -pMariStone1 -m -n1000000
 __TAIL__
   )
   opt.permute!(ARGV)
