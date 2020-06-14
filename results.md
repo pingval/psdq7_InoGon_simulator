@@ -352,7 +352,7 @@
 
 # シミュレーション結果
 
-100万回試行。
+***100万回試行。***
 
 - ガボ殴り戦術はターン数は縮むが、勝率は武器がブーメランの場合2%程度下がる。刃のブーメランならコンマ数%上がる。
   - ブーメランでもガボ石#2,3では勝率がコンマ数%しか落ちていないのは、先頭のマリベルに身かわしの服を装備させており、多少回復をサボっても耐えてくれるからだろう。
@@ -365,7 +365,7 @@
   2. 身かわしの服
 - けった氏と奴隷先輩氏の戦力の違いで大きなものは3列目のガボのキトンシールド(9)の有無くらいだが、後者は前者より勝率が7\~8%も低い。
   - これが意味するところはゴンズ痛恨耐え調整の重要性……かもしれないが、自分の書いた戦術は最後尾が防御を選択することがない(守備力が薄い場合を考慮していない)ことの影響もありそう。
-
+- マリベルLv10→11で勝率+6\~9%
 <!-- - 主:貝帽→鉄兜で勝率+4~5%
 - マリベルLv10→11で勝率+6~7%
  -->
@@ -393,6 +393,24 @@
 
 ## マリベルLv11
 
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 11 | 85.01% | 22.28 | 1.13 | [MariStone1_mari11_1M.txt](./log/MariStone1_mari11_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 11 | 85.16% | 22.16 | 1.06 | [MariStone2_mari11_1M.txt](./log/MariStone2_mari11_1M.txt) |
+| [ガボ石#1・ガボ殴らない](./lib/Party_GaboStone1.rb) | 11 | 83.93% | 22.37 | 0.92 | [GaboStone1_mari11_1M.txt](./log/GaboStone1_mari11_1M.txt) |
+| [ガボ石#1・ガボ殴る](./lib/Party_GaboStone1.rb) | 11 | 83.21% | 20.66 | 0.96 | [GaboStone1GA_mari11_1M.txt](./log/GaboStone1GA_mari11_1M.txt) |
+| [ガボ石#2・ガボ殴らない](./lib/Party_GaboStone2.rb) | 11 | 80.37% | 22.55 | 0.93 | [GaboStone2_mari11_1M.txt](./log/GaboStone2_mari11_1M.txt) |
+| [ガボ石#2・ガボ殴る](./lib/Party_GaboStone2.rb) | 11 | 81.08% | 20.60 | 0.91 | [GaboStone2GA_mari11_1M.txt](./log/GaboStone2GA_mari11_1M.txt) |
+| [ガボ石#3・ガボ殴らない](./lib/Party_GaboStone3.rb) | 11 | 79.78% | 22.00 | 0.91 | [GaboStone3_mari11_1M.txt](./log/GaboStone3_mari11_1M.txt) |
+| [ガボ石#3・ガボ殴る](./lib/Party_GaboStone3.rb) | 11 | 80.48% | 20.16 | 0.89 | [GaboStone3GA_mari11_1M.txt](./log/GaboStone3GA_mari11_1M.txt) |
+| [ガボ石#4・ガボ殴らない](./lib/Party_GaboStone4.rb) | 11 | 84.52% | 22.37 | 0.93 | [GaboStone4_mari11_1M.txt](./log/GaboStone4_mari11_1M.txt) |
+| [ガボ石#4・ガボ殴る](./lib/Party_GaboStone4.rb) | 11 | 83.68% | 20.71 | 0.98 | [GaboStone4GA_mari11_1M.txt](./log/GaboStone4GA_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 11 | 78.54% | 23.15 | 1.01 | [Ketta1249_mari11_1M.txt](./log/Ketta1249_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 11 | 79.49% | 20.46 | 1.01 | [Ketta1249GA_mari11_1M.txt](./log/Ketta1249GA_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 11 | 71.78% | 23.05 | 1.06 | [Drisnpi1250_mari11_1M.txt](./log/Drisnpi1250_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 11 | 73.27% | 20.40 | 1.05 | [Drisnpi1250GA_mari11_1M.txt](./log/Drisnpi1250GA_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 11 | 83.84% | 22.86 | 0.89 | [SteelKasimuu_mari11_1M.txt](./log/SteelKasimuu_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 11 | 83.54% | 21.12 | 0.91 | [SteelKasimuuGA_mari11_1M.txt](./log/SteelKasimuuGA_mari11_1M.txt) |
 
 ## 主:鉄兜
 
