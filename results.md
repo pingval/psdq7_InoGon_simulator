@@ -366,9 +366,7 @@
 - けった氏と奴隷先輩氏の戦力の違いで大きなものは3列目のガボのキトンシールド(9)の有無くらいだが、後者は前者より勝率が7\~8%も低い。
   - これが意味するところはゴンズ痛恨耐え調整の重要性……かもしれないが、自分の書いた戦術は最後尾が防御を選択することがない(守備力が薄い場合を考慮していない)ことの影響もありそう。
 - マリベルLv10→11で勝率+6\~9%
-<!-- - 主:貝帽→鉄兜で勝率+4~5%
-- マリベルLv10→11で勝率+6~7%
- -->
+- 主:貝帽→鉄兜で勝率+4~5%
 
 ## マリベルLv10
 
@@ -416,5 +414,42 @@
 
 ### マリベルLv10
 
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 10 | 83.50% | 21.80 | 1.06 | [MariStone1_IronHelm_mari10_1M.txt](./log/MariStone1_IronHelm_mari10_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 10 | 82.73% | 21.70 | 1.01 | [MariStone2_IronHelm_mari10_1M.txt](./log/MariStone2_IronHelm_mari10_1M.txt) |
+| [ガボ石#1・ガボ殴らない](./lib/Party_GaboStone1.rb) | 10 | 82.58% | 22.28 | 1.05 | [GaboStone1_IronHelm_mari10_1M.txt](./log/GaboStone1_IronHelm_mari10_1M.txt) |
+| [ガボ石#1・ガボ殴る](./lib/Party_GaboStone1.rb) | 10 | 80.83% | 20.66 | 1.16 | [GaboStone1GA_IronHelm_mari10_1M.txt](./log/GaboStone1GA_IronHelm_mari10_1M.txt) |
+| [ガボ石#2・ガボ殴らない](./lib/Party_GaboStone2.rb) | 10 | 81.29% | 22.33 | 0.97 | [GaboStone2_IronHelm_mari10_1M.txt](./log/GaboStone2_IronHelm_mari10_1M.txt) |
+| [ガボ石#2・ガボ殴る](./lib/Party_GaboStone2.rb) | 10 | 80.87% | 20.47 | 1.00 | [GaboStone2GA_IronHelm_mari10_1M.txt](./log/GaboStone2GA_IronHelm_mari10_1M.txt) |
+| [ガボ石#3・ガボ殴らない](./lib/Party_GaboStone3.rb) | 10 | 79.07% | 21.86 | 0.95 | [GaboStone3_IronHelm_mari10_1M.txt](./log/GaboStone3_IronHelm_mari10_1M.txt) |
+| [ガボ石#3・ガボ殴る](./lib/Party_GaboStone3.rb) | 10 | 78.85% | 20.07 | 0.98 | [GaboStone3GA_IronHelm_mari10_1M.txt](./log/GaboStone3GA_IronHelm_mari10_1M.txt) |
+| [ガボ石#4・ガボ殴らない](./lib/Party_GaboStone4.rb) | 10 | 82.64% | 22.18 | 1.06 | [GaboStone4_IronHelm_mari10_1M.txt](./log/GaboStone4_IronHelm_mari10_1M.txt) |
+| [ガボ石#4・ガボ殴る](./lib/Party_GaboStone4.rb) | 10 | 80.70% | 20.60 | 1.17 | [GaboStone4GA_IronHelm_mari10_1M.txt](./log/GaboStone4GA_IronHelm_mari10_1M.txt) |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 10 | 75.47% | 23.01 | 1.14 | [Ketta1249_IronHelm_mari10_1M.txt](./log/Ketta1249_IronHelm_mari10_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 10 | 75.59% | 20.39 | 1.19 | [Ketta1249GA_IronHelm_mari10_1M.txt](./log/Ketta1249GA_IronHelm_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 10 | 69.23% | 22.86 | 1.17 | [Drisnpi1250_IronHelm_mari10_1M.txt](./log/Drisnpi1250_IronHelm_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 10 | 69.48% | 20.29 | 1.22 | [Drisnpi1250GA_IronHelm_mari10_1M.txt](./log/Drisnpi1250GA_IronHelm_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 10 | 78.45% | 22.87 | 1.06 | [SteelKasimuu_IronHelm_mari10_1M.txt](./log/SteelKasimuu_IronHelm_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 10 | 76.87% | 21.20 | 1.14 | [SteelKasimuuGA_IronHelm_mari10_1M.txt](./log/SteelKasimuuGA_IronHelm_mari10_1M.txt) |
+
 ### マリベルLv11
 
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 11 | 89.35% | 21.90 | 1.01 | [MariStone1_IronHelm_mari11_1M.txt](./log/MariStone1_IronHelm_mari11_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 11 | 89.08% | 21.80 | 0.95 | [MariStone2_IronHelm_mari11_1M.txt](./log/MariStone2_IronHelm_mari11_1M.txt) |
+| [ガボ石#1・ガボ殴らない](./lib/Party_GaboStone1.rb) | 11 | 88.22% | 22.11 | 0.83 | [GaboStone1_IronHelm_mari11_1M.txt](./log/GaboStone1_IronHelm_mari11_1M.txt) |
+| [ガボ石#1・ガボ殴る](./lib/Party_GaboStone1.rb) | 11 | 87.44% | 20.42 | 0.88 | [GaboStone1GA_IronHelm_mari11_1M.txt](./log/GaboStone1GA_IronHelm_mari11_1M.txt) |
+| [ガボ石#2・ガボ殴らない](./lib/Party_GaboStone2.rb) | 11 | 86.08% | 22.29 | 0.84 | [GaboStone2_IronHelm_mari11_1M.txt](./log/GaboStone2_IronHelm_mari11_1M.txt) |
+| [ガボ石#2・ガボ殴る](./lib/Party_GaboStone2.rb) | 11 | 86.34% | 20.38 | 0.83 | [GaboStone2GA_IronHelm_mari11_1M.txt](./log/GaboStone2GA_IronHelm_mari11_1M.txt) |
+| [ガボ石#3・ガボ殴らない](./lib/Party_GaboStone3.rb) | 11 | 83.73% | 21.77 | 0.83 | [GaboStone3_IronHelm_mari11_1M.txt](./log/GaboStone3_IronHelm_mari11_1M.txt) |
+| [ガボ石#3・ガボ殴る](./lib/Party_GaboStone3.rb) | 11 | 84.42% | 19.92 | 0.81 | [GaboStone3GA_IronHelm_mari11_1M.txt](./log/GaboStone3GA_IronHelm_mari11_1M.txt) |
+| [ガボ石#4・ガボ殴らない](./lib/Party_GaboStone4.rb) | 11 | 87.98% | 22.00 | 0.85 | [GaboStone4_IronHelm_mari11_1M.txt](./log/GaboStone4_IronHelm_mari11_1M.txt) |
+| [ガボ石#4・ガボ殴る](./lib/Party_GaboStone4.rb) | 11 | 87.23% | 20.35 | 0.91 | [GaboStone4GA_IronHelm_mari11_1M.txt](./log/GaboStone4GA_IronHelm_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 11 | 82.50% | 22.87 | 0.94 | [Ketta1249_IronHelm_mari11_1M.txt](./log/Ketta1249_IronHelm_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 11 | 83.14% | 20.21 | 0.95 | [Ketta1249GA_IronHelm_mari11_1M.txt](./log/Ketta1249GA_IronHelm_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 11 | 77.17% | 22.78 | 0.98 | [Drisnpi1250_IronHelm_mari11_1M.txt](./log/Drisnpi1250_IronHelm_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 11 | 78.29% | 20.15 | 0.98 | [Drisnpi1250GA_IronHelm_mari11_1M.txt](./log/Drisnpi1250GA_IronHelm_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 11 | 85.11% | 22.72 | 0.86 | [SteelKasimuu_IronHelm_mari11_1M.txt](./log/SteelKasimuu_IronHelm_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 11 | 84.81% | 21.00 | 0.88 | [SteelKasimuuGA_IronHelm_mari11_1M.txt](./log/SteelKasimuuGA_IronHelm_mari11_1M.txt) |
