@@ -1,7 +1,7 @@
 N: 1000000
 Log Timing: none
 
-Party: #<Proc:0x00000000064813f8 Party_Ketta1249.rb:68 (lambda)>
+Party: #<Proc:0x0000000006451478 Party_Ketta1249.rb:68 (lambda)>
 Maribel's Level: 10
 Seed Type: rand
 
@@ -10,7 +10,7 @@ Seed Type: rand
   Status
     Max HP                            53        81        62
     Max MP                            39        29         0
-    Atk                               13        61        52
+    Atk                               13        62        52
     Def                               59        69        64
     Agi                               30        18        44
     Eva                            3.10%     3.10%     3.10% ; みかわし率
@@ -27,61 +27,61 @@ Seed Type: rand
       Tail/Claw                   28..33    25..30    26..31 ; 尻尾/爪できりさく
       BrutalHit                 *57..*67    50..60   52..*62
 
-Win rate:	75.59%
+Win rate:	76.21%
 * Win
-  Ave. turn count: 20.39
+  Ave. turn count: 20.07
   Party:
                                     No.1      No.2      No.3
-    Ave. death count                0.84      0.31      0.30
-    Death rate on battle end      13.78%     3.74%     8.09%
-    Ave. HP on battle end          38.78     67.82     53.27
-    Ave. Herb count                 0.23      3.45       NaN
+    Ave. death count                0.83      0.30      0.30
+    Death rate on battle end      13.48%     3.67%     7.94%
+    Ave. HP on battle end          38.92     67.99     53.37
+    Ave. Herb count                 0.22      3.40       NaN
     Ave. Leaf count                 0.00      0.66      0.53
   Distribution of Leaf count: ; 世界樹の葉消費数の分布
-        0    20.85%
-        1    38.82%
-        2    40.34%
-    Ave.       1.19
+        0    21.30%
+        1    38.96%
+        2    39.74%
+    Ave.       1.18
   Troop:
                                     No.1      No.2
     Death rate on battle end     100.00%   100.00%
     Ave. HP on battle end           0.00      0.00
 
 * Lose
-  Ave. turn count: 18.40
+  Ave. turn count: 18.20
   Party:
                                     No.1      No.2      No.3
-    Ave. death count                1.79      1.32      1.29
+    Ave. death count                1.78      1.31      1.30
     Death rate on battle end     100.00%   100.00%   100.00%
     Ave. HP on battle end           0.00      0.00      0.00
-    Ave. Herb count                 0.24      2.29       NaN
-    Ave. Leaf count                 0.00      0.79      0.61
+    Ave. Herb count                 0.23      2.25       NaN
+    Ave. Leaf count                 0.00      0.79      0.60
   Distribution of Leaf count: ; 世界樹の葉消費数の分布
-        0     7.98%
-        1    44.20%
-        2    47.82%
-    Ave.       1.40
+        0     8.17%
+        1    44.62%
+        2    47.20%
+    Ave.       1.39
   Troop:
                                     No.1      No.2
-    Death rate on battle end       4.01%     5.75%
-    Ave. HP on battle end         146.88    135.20
+    Death rate on battle end       3.96%     5.66%
+    Ave. HP on battle end         146.84    135.40
 
 * Both
-  Ave. turn count: 19.91
+  Ave. turn count: 19.62
   Party:
                                     No.1      No.2      No.3
-    Ave. death count                1.07      0.55      0.54
-    Death rate on battle end      34.82%    27.24%    30.52%
-    Ave. HP on battle end          29.31     51.27     40.27
-    Ave. Herb count                 0.23      3.17       NaN
-    Ave. Leaf count                 0.00      0.69      0.55
+    Ave. death count                1.06      0.54      0.54
+    Death rate on battle end      34.06%    26.58%    29.83%
+    Ave. HP on battle end          29.67     51.82     40.67
+    Ave. Herb count                 0.23      3.13       NaN
+    Ave. Leaf count                 0.00      0.69      0.54
   Distribution of Leaf count: ; 世界樹の葉消費数の分布
-        0    17.71%
-        1    40.13%
-        2    42.16%
-    Ave.       1.24
+        0    18.18%
+        1    40.31%
+        2    41.51%
+    Ave.       1.23
   Troop:
                                     No.1      No.2
-    Death rate on battle end      76.57%    77.00%
-    Ave. HP on battle end          35.85     33.00
+    Death rate on battle end      77.16%    77.56%
+    Ave. HP on battle end          34.93     32.20
 
