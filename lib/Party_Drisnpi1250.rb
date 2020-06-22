@@ -13,7 +13,7 @@ def hero_Drisnpi1250(seed_type: :rand)
       agi: 0,
       eva: 0,
     },
-    seeds: { mhp: 2, mmp: 0, atk: 4, def: 1, agi: 0, },
+    seeds: { mhp: 2, mmp: 0, atk: 5, def: 1, agi: 0, },
     inventory: { Herb: 6, Leaf: 1 },
   )
 end

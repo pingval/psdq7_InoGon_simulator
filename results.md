@@ -17,6 +17,14 @@
     - [マリベルLv10](#マリベルlv10-1)
     - [マリベルLv11](#マリベルlv11-1)
   - [考察](#考察)
+  - [力種4](#力種4)
+    - [マリベルLv10](#マリベルlv10-2)
+    - [マリベルLv11](#マリベルlv11-2)
+    - [主:鉄兜](#主鉄兜-1)
+  - [力種6](#力種6)
+    - [マリベルLv10](#マリベルlv10-3)
+    - [マリベルLv11](#マリベルlv11-3)
+    - [主:鉄兜](#主鉄兜-2)
 
 <!-- /TOC -->
 
@@ -33,10 +41,9 @@
   <dd>鉄兜(1100G)は過去グリンフレークで購入可能。主:Def+8・ガ:Def+3</dd>
   <dt>みかわしの服のみかわし率</dt>
   <dd>1/6</dd>
+  <dt>主に投与する力の種は5個で統一</dt>
+  <dd>けった氏・奴隷先輩氏・steel氏の投与数は本来4個だが、比較しやすくするために。</dd>
 </dl>
-
-- ガボ石戦術はマリベル石戦術より力種-1としている(謎のからくり跡地カットを想定)
-- けった氏・奴隷先輩氏・steel氏の戦力は更に力種-1としている(イノゴン道中の力種後回収)
 
 ## マリベル石#1
 
@@ -48,7 +55,7 @@
 | 隊列 | キャラ | Lv | 武 | 鎧 | 盾 | 兜 | 飾 | 命実 | 不実 | 力種 | 守種 | 早種 | HP | MP | Atk | Def | Agi |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | ガ | 4 | 鉄爪(21) | 毛マ(18) | キ盾(9) | 尖帽(5) | - | 0 | 2 | 0 | 0 | 4 | 59 | 8 | 47 | 45 | 44 |
-| 2 | 主 | 10 | 刃ブ(26) | 派服(28) | 鉄盾(13) | 貝帽(8) | スピ(Atk1) | 2 | 0 | 6 | 2 | 0 | 81 | 29 | 64 | 63 | 18 |
+| 2 | 主 | 10 | 刃ブ(26) | 派服(28) | 鉄盾(13) | 貝帽(8) | スピ(Atk1) | 2 | 0 | 5 | 2 | 0 | 81 | 29 | 64 | 63 | 18 |
 | 3 | マ | 10 | 毒刀(23) | 身服(28) | シト(15) | 兎耳(15) | 祈輪(5) | 2 | 1 | 0 | 3 | 0 | 57 | 39 | 36 | 77 | 30 |
 
 ```
@@ -56,7 +63,7 @@
   Status
     Max HP                            59        81        57
     Max MP                             8        29        39
-    Atk                               47        64        36
+    Atk                               47        62        36
     Def                               45        63        77
     Agi                               44        18        30
     Eva                            3.10%     3.10%    19.25% ; みかわし率
@@ -83,7 +90,7 @@
 | 隊列 | キャラ | Lv | 武 | 鎧 | 盾 | 兜 | 飾 | 命実 | 不実 | 力種 | 守種 | 早種 | HP | MP | Atk | Def | Agi |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | ガ | 4 | 鉄爪(21) | 毛マ(18) | キ盾(9) | 尖帽(5) | - | 0 | 2 | 0 | 0 | 4 | 62 | 8 | 47 | 45 | 44 |
-| 2 | 主 | 10 | 刃ブ(26) | 派服(28) | 鉄盾(13) | 貝帽(8) | スピ(Atk1) | 2 | 0 | 6 | 2 | 0 | 81 | 29 | 64 | 63 | 18 |
+| 2 | 主 | 10 | 刃ブ(26) | 派服(28) | 鉄盾(13) | 貝帽(8) | スピ(Atk1) | 2 | 0 | 5 | 2 | 0 | 81 | 29 | 64 | 63 | 18 |
 | 3 | マ | 10 | 毒刀(23) | 身服(28) | シト(15) | 兎耳(15) | 祈輪(5) | 2 | 1 | 0 | 3 | 0 | 53 | 39 | 36 | 77 | 30 |
 
 ```
@@ -91,7 +98,7 @@
   Status
     Max HP                            62        81        53
     Max MP                             8        29        39
-    Atk                               47        64        36
+    Atk                               47        62        36
     Def                               45        63        77
     Agi                               44        18        30
     Eva                            3.10%     3.10%    19.25% ; みかわし率
@@ -256,7 +263,7 @@
 | 隊列 | キャラ | Lv | 武 | 鎧 | 盾 | 兜 | 飾 | 命実 | 不実 | 力種 | 守種 | 早種 | HP | MP | Atk | Def | Agi | 薬草 | 世葉 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | マ | 10 | - | 毛マ(18) | シト(15) | 兎耳(15) | - | 1 | 1 | 0 | 1 | 0 | 53 | 39 | 13 | 59 | 30 | 9 | 0 |
-| 2 | 主 | 10 | 刃ブ(26) | 鉄胸(26) | 鉄盾(13) | 木帽(6) | スピ(Atk1) | 2 | 0 | 4 | 2 | 0 | 81 | 29 | 61 | 59 | 18 | 6 | 1 |
+| 2 | 主 | 10 | 刃ブ(26) | 鉄胸(26) | 鉄盾(13) | 木帽(6) | スピ(Atk1) | 2 | 0 | 5 | 2 | 0 | 81 | 29 | 61 | 59 | 18 | 6 | 1 |
 | 3 | ガ | 4 | 刃ブ(26) | 派服(28) | キ盾(9) | 貝帽(8) | 祈輪(5) | 1 | 0 | 0 | 1 | 4 | 62 | 0 | 52 | 64 | 44 | 石 | 1 |
 
 ```
@@ -264,7 +271,7 @@
   Status
     Max HP                            53        81        62
     Max MP                            39        29         0
-    Atk                               13        61        52
+    Atk                               13        62        52
     Def                               59        59        64
     Agi                               30        18        44
     Eva                            3.10%     3.10%     3.10% ; みかわし率
@@ -291,7 +298,7 @@
 | 隊列 | キャラ | Lv | 武 | 鎧 | 盾 | 兜 | 飾 | 命実 | 不実 | 力種 | 守種 | 早種 | HP | MP | Atk | Def | Agi | 薬草 | 世葉 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | マ | 10 | - | 毛マ(18) | シト(15) | 兎耳(15) | - | 1 | 1 | 0 | 2 | 0 | 53 | 39 | 13 | 61 | 30 | 9 | 0 |
-| 2 | 主 | 10 | 刃ブ(26) | 鉄胸(26) | 鉄盾(13) | 尖帽(5) | スピ(Atk1) | 2 | 0 | 4 | 1 | 0 | 81 | 29 | 61 | 56 | 18 | 6 | 1 |
+| 2 | 主 | 10 | 刃ブ(26) | 鉄胸(26) | 鉄盾(13) | 尖帽(5) | スピ(Atk1) | 2 | 0 | 5 | 1 | 0 | 81 | 29 | 61 | 56 | 18 | 6 | 1 |
 | 3 | ガ | 4 | 刃ブ(26) | 派服(28) | - | 貝帽(8) | 祈輪(5) | 1 | 2 | 0 | 2 | 2 | 62 | 8 | 52 | 57 | 41 | 石 | 1 |
 
 ```
@@ -299,7 +306,7 @@
   Status
     Max HP                            53        81        62
     Max MP                            39        29         8
-    Atk                               13        61        52
+    Atk                               13        62        52
     Def                               61        56        57
     Agi                               30        18        41
     Eva                            3.10%     3.10%     3.10% ; みかわし率
@@ -326,7 +333,7 @@
 | 隊列 | キャラ | Lv | 武 | 鎧 | 盾 | 兜 | 飾 | 命実 | 不実 | 力種 | 守種 | 早種 | HP | MP | Atk | Def | Agi | 薬草 | 世葉 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | マ | 11 | 毒刀(23) | 毛マ(18) | シト(15) | 兎耳(15) | 祈輪(5) | 1 | 1 | 0 | 3 | 0 | 63 | 45 | 37 | 68 | 33 | 9 | 0 |
-| 2 | 主 | 10 | 刃ブ(26) | 鉄胸(26) | 鉄盾(13) | タバ(12) | スピ(Atk1) | 2 | 0 | 4 | 1 | 0 | 81 | 29 | 61 | 63 | 18 | 6 | 1 |
+| 2 | 主 | 10 | 刃ブ(26) | 鉄胸(26) | 鉄盾(13) | タバ(12) | スピ(Atk1) | 2 | 0 | 5 | 1 | 0 | 81 | 29 | 61 | 63 | 18 | 6 | 1 |
 | 3 | ガ | 4 | ブメ(15) | 派服(28) | キ盾(9) | タバ(12) | - | 1 | 1 | 0 | 2 | 4 | 62 | 4 | 41 | 65 | 44 | 石 | 1 |
 
 ```
@@ -334,7 +341,7 @@
   Status
     Max HP                            63        81        62
     Max MP                            45        29         4
-    Atk                               37        61        41
+    Atk                               37        62        41
     Def                               68        63        65
     Agi                               33        18        44
     Eva                            3.10%     3.10%     3.10% ; みかわし率
@@ -360,8 +367,8 @@
 
 | 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| [マリベル石#1](./lib/Party_MariStone1.rb) | 10 | 78.42% | 22.14 | 1.17 | [MariStone1_mari10_1M.txt](./log/MariStone1_mari10_1M.txt) |
-| [マリベル石#2](./lib/Party_MariStone2.rb) | 10 | 78.15% | 22.00 | 1.10 | [MariStone2_mari10_1M.txt](./log/MariStone2_mari10_1M.txt) |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 10 | 77.68% | 22.58 | 1.18 | [MariStone1_mari10_1M.txt](./log/MariStone1_mari10_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 10 | 77.48% | 22.45 | 1.12 | [MariStone2_mari10_1M.txt](./log/MariStone2_mari10_1M.txt) |
 | [ガボ石#1・ガボ殴らない](./lib/Party_GaboStone1.rb) | 10 | 77.32% | 22.48 | 1.12 | [GaboStone1_mari10_1M.txt](./log/GaboStone1_mari10_1M.txt) |
 | [ガボ石#1・ガボ殴る](./lib/Party_GaboStone1.rb) | 10 | 75.38% | 20.83 | 1.21 | [GaboStone1GA_mari10_1M.txt](./log/GaboStone1GA_mari10_1M.txt) |
 | [ガボ石#2・ガボ殴らない](./lib/Party_GaboStone2.rb) | 10 | 74.73% | 22.51 | 1.04 | [GaboStone2_mari10_1M.txt](./log/GaboStone2_mari10_1M.txt) |
@@ -370,19 +377,19 @@
 | [ガボ石#3・ガボ殴る](./lib/Party_GaboStone3.rb) | 10 | 74.30% | 20.24 | 1.04 | [GaboStone3GA_mari10_1M.txt](./log/GaboStone3GA_mari10_1M.txt) |
 | [ガボ石#4・ガボ殴らない](./lib/Party_GaboStone4.rb) | 10 | 78.38% | 22.50 | 1.13 | [GaboStone4_mari10_1M.txt](./log/GaboStone4_mari10_1M.txt) |
 | [ガボ石#4・ガボ殴る](./lib/Party_GaboStone4.rb) | 10 | 76.15% | 20.89 | 1.23 | [GaboStone4GA_mari10_1M.txt](./log/GaboStone4GA_mari10_1M.txt) |
-| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 10 | 70.73% | 23.24 | 1.19 | [Ketta1249_mari10_1M.txt](./log/Ketta1249_mari10_1M.txt) |
-| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 10 | 71.02% | 20.59 | 1.24 | [Ketta1249GA_mari10_1M.txt](./log/Ketta1249GA_mari10_1M.txt) |
-| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 10 | 62.99% | 23.09 | 1.23 | [Drisnpi1250_mari10_1M.txt](./log/Drisnpi1250_mari10_1M.txt) |
-| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 10 | 63.70% | 20.47 | 1.27 | [Drisnpi1250GA_mari10_1M.txt](./log/Drisnpi1250GA_mari10_1M.txt) |
-| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 10 | 76.77% | 22.97 | 1.09 | [SteelKasimuu_mari10_1M.txt](./log/SteelKasimuu_mari10_1M.txt) |
-| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 10 | 75.06% | 21.30 | 1.17 | [SteelKasimuuGA_mari10_1M.txt](./log/SteelKasimuuGA_mari10_1M.txt) |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 10 | 71.62% | 22.78 | 1.18 | [Ketta1249_mari10_1M.txt](./log/Ketta1249_mari10_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 10 | 71.74% | 20.25 | 1.23 | [Ketta1249GA_mari10_1M.txt](./log/Ketta1249GA_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 10 | 64.06% | 22.63 | 1.21 | [Drisnpi1250_mari10_1M.txt](./log/Drisnpi1250_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 10 | 64.53% | 20.14 | 1.26 | [Drisnpi1250GA_mari10_1M.txt](./log/Drisnpi1250GA_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 10 | 77.49% | 22.51 | 1.07 | [SteelKasimuu_mari10_1M.txt](./log/SteelKasimuu_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 10 | 75.93% | 20.93 | 1.15 | [SteelKasimuuGA_mari10_1M.txt](./log/SteelKasimuuGA_mari10_1M.txt) |
 
 ## マリベルLv11
 
 | 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| [マリベル石#1](./lib/Party_MariStone1.rb) | 11 | 85.01% | 22.28 | 1.13 | [MariStone1_mari11_1M.txt](./log/MariStone1_mari11_1M.txt) |
-| [マリベル石#2](./lib/Party_MariStone2.rb) | 11 | 85.16% | 22.16 | 1.06 | [MariStone2_mari11_1M.txt](./log/MariStone2_mari11_1M.txt) |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 11 | 84.35% | 22.73 | 1.15 | [MariStone1_mari11_1M.txt](./log/MariStone1_mari11_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 11 | 84.68% | 22.60 | 1.07 | [MariStone2_mari11_1M.txt](./log/MariStone2_mari11_1M.txt) |
 | [ガボ石#1・ガボ殴らない](./lib/Party_GaboStone1.rb) | 11 | 83.93% | 22.37 | 0.92 | [GaboStone1_mari11_1M.txt](./log/GaboStone1_mari11_1M.txt) |
 | [ガボ石#1・ガボ殴る](./lib/Party_GaboStone1.rb) | 11 | 83.21% | 20.66 | 0.96 | [GaboStone1GA_mari11_1M.txt](./log/GaboStone1GA_mari11_1M.txt) |
 | [ガボ石#2・ガボ殴らない](./lib/Party_GaboStone2.rb) | 11 | 80.37% | 22.55 | 0.93 | [GaboStone2_mari11_1M.txt](./log/GaboStone2_mari11_1M.txt) |
@@ -391,12 +398,12 @@
 | [ガボ石#3・ガボ殴る](./lib/Party_GaboStone3.rb) | 11 | 80.48% | 20.16 | 0.89 | [GaboStone3GA_mari11_1M.txt](./log/GaboStone3GA_mari11_1M.txt) |
 | [ガボ石#4・ガボ殴らない](./lib/Party_GaboStone4.rb) | 11 | 84.52% | 22.37 | 0.93 | [GaboStone4_mari11_1M.txt](./log/GaboStone4_mari11_1M.txt) |
 | [ガボ石#4・ガボ殴る](./lib/Party_GaboStone4.rb) | 11 | 83.68% | 20.71 | 0.98 | [GaboStone4GA_mari11_1M.txt](./log/GaboStone4GA_mari11_1M.txt) |
-| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 11 | 78.54% | 23.15 | 1.01 | [Ketta1249_mari11_1M.txt](./log/Ketta1249_mari11_1M.txt) |
-| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 11 | 79.49% | 20.46 | 1.01 | [Ketta1249GA_mari11_1M.txt](./log/Ketta1249GA_mari11_1M.txt) |
-| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 11 | 71.78% | 23.05 | 1.06 | [Drisnpi1250_mari11_1M.txt](./log/Drisnpi1250_mari11_1M.txt) |
-| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 11 | 73.27% | 20.40 | 1.05 | [Drisnpi1250GA_mari11_1M.txt](./log/Drisnpi1250GA_mari11_1M.txt) |
-| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 11 | 83.84% | 22.86 | 0.89 | [SteelKasimuu_mari11_1M.txt](./log/SteelKasimuu_mari11_1M.txt) |
-| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 11 | 83.54% | 21.12 | 0.91 | [SteelKasimuuGA_mari11_1M.txt](./log/SteelKasimuuGA_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 11 | 79.23% | 22.67 | 0.99 | [Ketta1249_mari11_1M.txt](./log/Ketta1249_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 11 | 79.97% | 20.13 | 1.00 | [Ketta1249GA_mari11_1M.txt](./log/Ketta1249GA_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 11 | 72.50% | 22.61 | 1.04 | [Drisnpi1250_mari11_1M.txt](./log/Drisnpi1250_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 11 | 73.96% | 20.05 | 1.04 | [Drisnpi1250GA_mari11_1M.txt](./log/Drisnpi1250GA_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 11 | 84.32% | 22.40 | 0.87 | [SteelKasimuu_mari11_1M.txt](./log/SteelKasimuu_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 11 | 83.96% | 20.75 | 0.90 | [SteelKasimuuGA_mari11_1M.txt](./log/SteelKasimuuGA_mari11_1M.txt) |
 
 ## 主:鉄兜
 
@@ -404,8 +411,8 @@
 
 | 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| [マリベル石#1](./lib/Party_MariStone1.rb) | 10 | 83.50% | 21.80 | 1.06 | [MariStone1_IronHelm_mari10_1M.txt](./log/MariStone1_IronHelm_mari10_1M.txt) |
-| [マリベル石#2](./lib/Party_MariStone2.rb) | 10 | 82.73% | 21.70 | 1.01 | [MariStone2_IronHelm_mari10_1M.txt](./log/MariStone2_IronHelm_mari10_1M.txt) |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 10 | 82.84% | 22.24 | 1.07 | [MariStone1_IronHelm_mari10_1M.txt](./log/MariStone1_IronHelm_mari10_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 10 | 82.17% | 22.12 | 1.02 | [MariStone2_IronHelm_mari10_1M.txt](./log/MariStone2_IronHelm_mari10_1M.txt) |
 | [ガボ石#1・ガボ殴らない](./lib/Party_GaboStone1.rb) | 10 | 82.58% | 22.28 | 1.05 | [GaboStone1_IronHelm_mari10_1M.txt](./log/GaboStone1_IronHelm_mari10_1M.txt) |
 | [ガボ石#1・ガボ殴る](./lib/Party_GaboStone1.rb) | 10 | 80.83% | 20.66 | 1.16 | [GaboStone1GA_IronHelm_mari10_1M.txt](./log/GaboStone1GA_IronHelm_mari10_1M.txt) |
 | [ガボ石#2・ガボ殴らない](./lib/Party_GaboStone2.rb) | 10 | 81.29% | 22.33 | 0.97 | [GaboStone2_IronHelm_mari10_1M.txt](./log/GaboStone2_IronHelm_mari10_1M.txt) |
@@ -414,19 +421,19 @@
 | [ガボ石#3・ガボ殴る](./lib/Party_GaboStone3.rb) | 10 | 78.85% | 20.07 | 0.98 | [GaboStone3GA_IronHelm_mari10_1M.txt](./log/GaboStone3GA_IronHelm_mari10_1M.txt) |
 | [ガボ石#4・ガボ殴らない](./lib/Party_GaboStone4.rb) | 10 | 82.64% | 22.18 | 1.06 | [GaboStone4_IronHelm_mari10_1M.txt](./log/GaboStone4_IronHelm_mari10_1M.txt) |
 | [ガボ石#4・ガボ殴る](./lib/Party_GaboStone4.rb) | 10 | 80.70% | 20.60 | 1.17 | [GaboStone4GA_IronHelm_mari10_1M.txt](./log/GaboStone4GA_IronHelm_mari10_1M.txt) |
-| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 10 | 75.47% | 23.01 | 1.14 | [Ketta1249_IronHelm_mari10_1M.txt](./log/Ketta1249_IronHelm_mari10_1M.txt) |
-| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 10 | 75.59% | 20.39 | 1.19 | [Ketta1249GA_IronHelm_mari10_1M.txt](./log/Ketta1249GA_IronHelm_mari10_1M.txt) |
-| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 10 | 69.23% | 22.86 | 1.17 | [Drisnpi1250_IronHelm_mari10_1M.txt](./log/Drisnpi1250_IronHelm_mari10_1M.txt) |
-| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 10 | 69.48% | 20.29 | 1.22 | [Drisnpi1250GA_IronHelm_mari10_1M.txt](./log/Drisnpi1250GA_IronHelm_mari10_1M.txt) |
-| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 10 | 78.45% | 22.87 | 1.06 | [SteelKasimuu_IronHelm_mari10_1M.txt](./log/SteelKasimuu_IronHelm_mari10_1M.txt) |
-| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 10 | 76.87% | 21.20 | 1.14 | [SteelKasimuuGA_IronHelm_mari10_1M.txt](./log/SteelKasimuuGA_IronHelm_mari10_1M.txt) |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 10 | 76.36% | 19.68 | 1.12 | [Ketta1249_IronHelm_mari10_1M.txt](./log/Ketta1249_IronHelm_mari10_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 10 | 76.21% | 20.07 | 1.18 | [Ketta1249GA_IronHelm_mari10_1M.txt](./log/Ketta1249GA_IronHelm_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 10 | 70.18% | 22.42 | 1.16 | [Drisnpi1250_IronHelm_mari10_1M.txt](./log/Drisnpi1250_IronHelm_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 10 | 70.33% | 19.95 | 1.21 | [Drisnpi1250GA_IronHelm_mari10_1M.txt](./log/Drisnpi1250GA_IronHelm_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 10 | 79.19% | 22.40 | 1.05 | [SteelKasimuu_IronHelm_mari10_1M.txt](./log/SteelKasimuu_IronHelm_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 10 | 77.49% | 20.83 | 1.13 | [SteelKasimuuGA_IronHelm_mari10_1M.txt](./log/SteelKasimuuGA_IronHelm_mari10_1M.txt) |
 
 ### マリベルLv11
 
 | 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| [マリベル石#1](./lib/Party_MariStone1.rb) | 11 | 89.35% | 21.90 | 1.01 | [MariStone1_IronHelm_mari11_1M.txt](./log/MariStone1_IronHelm_mari11_1M.txt) |
-| [マリベル石#2](./lib/Party_MariStone2.rb) | 11 | 89.08% | 21.80 | 0.95 | [MariStone2_IronHelm_mari11_1M.txt](./log/MariStone2_IronHelm_mari11_1M.txt) |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 11 | 88.86% | 22.35 | 1.03 | [MariStone1_IronHelm_mari11_1M.txt](./log/MariStone1_IronHelm_mari11_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 11 | 88.71% | 22.24 | 0.97 | [MariStone2_IronHelm_mari11_1M.txt](./log/MariStone2_IronHelm_mari11_1M.txt) |
 | [ガボ石#1・ガボ殴らない](./lib/Party_GaboStone1.rb) | 11 | 88.22% | 22.11 | 0.83 | [GaboStone1_IronHelm_mari11_1M.txt](./log/GaboStone1_IronHelm_mari11_1M.txt) |
 | [ガボ石#1・ガボ殴る](./lib/Party_GaboStone1.rb) | 11 | 87.44% | 20.42 | 0.88 | [GaboStone1GA_IronHelm_mari11_1M.txt](./log/GaboStone1GA_IronHelm_mari11_1M.txt) |
 | [ガボ石#2・ガボ殴らない](./lib/Party_GaboStone2.rb) | 11 | 86.08% | 22.29 | 0.84 | [GaboStone2_IronHelm_mari11_1M.txt](./log/GaboStone2_IronHelm_mari11_1M.txt) |
@@ -435,16 +442,15 @@
 | [ガボ石#3・ガボ殴る](./lib/Party_GaboStone3.rb) | 11 | 84.42% | 19.92 | 0.81 | [GaboStone3GA_IronHelm_mari11_1M.txt](./log/GaboStone3GA_IronHelm_mari11_1M.txt) |
 | [ガボ石#4・ガボ殴らない](./lib/Party_GaboStone4.rb) | 11 | 87.98% | 22.00 | 0.85 | [GaboStone4_IronHelm_mari11_1M.txt](./log/GaboStone4_IronHelm_mari11_1M.txt) |
 | [ガボ石#4・ガボ殴る](./lib/Party_GaboStone4.rb) | 11 | 87.23% | 20.35 | 0.91 | [GaboStone4GA_IronHelm_mari11_1M.txt](./log/GaboStone4GA_IronHelm_mari11_1M.txt) |
-| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 11 | 82.50% | 22.87 | 0.94 | [Ketta1249_IronHelm_mari11_1M.txt](./log/Ketta1249_IronHelm_mari11_1M.txt) |
-| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 11 | 83.14% | 20.21 | 0.95 | [Ketta1249GA_IronHelm_mari11_1M.txt](./log/Ketta1249GA_IronHelm_mari11_1M.txt) |
-| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 11 | 77.17% | 22.78 | 0.98 | [Drisnpi1250_IronHelm_mari11_1M.txt](./log/Drisnpi1250_IronHelm_mari11_1M.txt) |
-| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 11 | 78.29% | 20.15 | 0.98 | [Drisnpi1250GA_IronHelm_mari11_1M.txt](./log/Drisnpi1250GA_IronHelm_mari11_1M.txt) |
-| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 11 | 85.11% | 22.72 | 0.86 | [SteelKasimuu_IronHelm_mari11_1M.txt](./log/SteelKasimuu_IronHelm_mari11_1M.txt) |
-| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 11 | 84.81% | 21.00 | 0.88 | [SteelKasimuuGA_IronHelm_mari11_1M.txt](./log/SteelKasimuuGA_IronHelm_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 11 | 82.97% | 22.40 | 0.93 | [Ketta1249_IronHelm_mari11_1M.txt](./log/Ketta1249_IronHelm_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 11 | 83.58% | 19.88 | 0.94 | [Ketta1249GA_IronHelm_mari11_1M.txt](./log/Ketta1249GA_IronHelm_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 11 | 77.79% | 22.32 | 0.97 | [Drisnpi1250_IronHelm_mari11_1M.txt](./log/Drisnpi1250_IronHelm_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 11 | 78.72% | 19.81 | 0.97 | [Drisnpi1250GA_IronHelm_mari11_1M.txt](./log/Drisnpi1250GA_IronHelm_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 11 | 85.56% | 22.27 | 0.85 | [SteelKasimuu_IronHelm_mari11_1M.txt](./log/SteelKasimuu_IronHelm_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 11 | 85.23% | 20.63 | 0.87 | [SteelKasimuuGA_IronHelm_mari11_1M.txt](./log/SteelKasimuuGA_IronHelm_mari11_1M.txt) |
 
 ## 考察
 
-- けった氏・奴隷先輩氏・steel氏の戦力はイノゴン道中力の種後回収としており、他のガボ石戦力より力の種-1個。[力の種は1個あたり-0.5T、マリベルLv10で勝率+0.9%、Lv11で+0.7%らしい](https://twitter.com/pingval/status/1262766541617025026)のでその辺も考慮する必要あり。ややこしくてごめんなさい。
 - ガボ殴り戦術はターン数は縮むが、勝率は武器がブーメランの場合2%程度下がる。刃のブーメランならコンマ数%上がる。
   - ブーメランでもガボ石#2,3では勝率がコンマ数%しか落ちていないのは、先頭のマリベルに身かわしの服を装備させており、多少回復をサボっても耐えてくれるからだろう。
 - ガボ石#1\~4のうち、#2,3は#1,4より勝率が2\~3%低い。
@@ -463,3 +469,85 @@
   - steel氏のは1~2%しか上がっていないが、これは主人公の元の頭装備がターバン(12)で恩恵が少ないせいだろう。
 - [古いやつ](./old_results.md)の結果によれば、微妙なところではあるが葉っぱが1枚しかない場合、2列目より3列目に持たせたほうが僅かに勝率が高いようだ。
   - イノゴン道中で死者が出てしまった場合、2列目の葉っぱで蘇生するのがよさそう。
+
+----
+
+## 力種4
+
+### マリベルLv10
+
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 10 | 70.73% | 23.24 | 1.19 | [Ketta1249_str4_mari10_1M.txt](./log/Ketta1249_str4_mari10_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 10 | 71.02% | 20.59 | 1.24 | [Ketta1249GA_str4_mari10_1M.txt](./log/Ketta1249GA_str4_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 10 | 62.99% | 23.09 | 1.23 | [Drisnpi1250_str4_mari10_1M.txt](./log/Drisnpi1250_str4_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 10 | 63.70% | 20.47 | 1.27 | [Drisnpi1250GA_str4_mari10_1M.txt](./log/Drisnpi1250GA_str4_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 10 | 76.77% | 22.97 | 1.09 | [SteelKasimuu_str4_mari10_1M.txt](./log/SteelKasimuu_str4_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 10 | 75.06% | 21.30 | 1.17 | [SteelKasimuuGA_str4_mari10_1M.txt](./log/SteelKasimuuGA_str4_mari10_1M.txt) |
+
+### マリベルLv11
+
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 11 | 78.54% | 23.15 | 1.01 | [Ketta1249_str4_mari11_1M.txt](./log/Ketta1249_str4_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 11 | 79.49% | 20.46 | 1.01 | [Ketta1249GA_str4_mari11_1M.txt](./log/Ketta1249GA_str4_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 11 | 71.78% | 23.05 | 1.06 | [Drisnpi1250_str4_mari11_1M.txt](./log/Drisnpi1250_str4_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 11 | 73.27% | 20.40 | 1.05 | [Drisnpi1250GA_str4_mari11_1M.txt](./log/Drisnpi1250GA_str4_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 11 | 83.84% | 22.86 | 0.89 | [SteelKasimuu_str4_mari11_1M.txt](./log/SteelKasimuu_str4_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 11 | 83.54% | 21.12 | 0.91 | [SteelKasimuuGA_str4_mari11_1M.txt](./log/SteelKasimuuGA_str4_mari11_1M.txt) |
+
+### 主:鉄兜
+
+#### マリベルLv10
+
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 10 | 75.47% | 23.01 | 1.14 | [Ketta1249_IronHelm_str4_mari10_1M.txt](./log/Ketta1249_IronHelm_str4_mari10_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 10 | 75.59% | 20.39 | 1.19 | [Ketta1249GA_IronHelm_str4_mari10_1M.txt](./log/Ketta1249GA_IronHelm_str4_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 10 | 69.23% | 22.86 | 1.17 | [Drisnpi1250_IronHelm_str4_mari10_1M.txt](./log/Drisnpi1250_IronHelm_str4_mari10_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 10 | 69.48% | 20.29 | 1.22 | [Drisnpi1250GA_IronHelm_str4_mari10_1M.txt](./log/Drisnpi1250GA_IronHelm_str4_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 10 | 78.45% | 22.87 | 1.06 | [SteelKasimuu_IronHelm_str4_mari10_1M.txt](./log/SteelKasimuu_IronHelm_str4_mari10_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 10 | 76.87% | 21.20 | 1.14 | [SteelKasimuuGA_IronHelm_str4_mari10_1M.txt](./log/SteelKasimuuGA_IronHelm_str4_mari10_1M.txt) |
+
+#### マリベルLv11
+
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [けった氏12:49:48・ガボ殴らない](./lib/Party_Ketta1249.rb) | 11 | 82.50% | 22.87 | 0.94 | [Ketta1249_IronHelm_str4_mari11_1M.txt](./log/Ketta1249_IronHelm_str4_mari11_1M.txt) |
+| [けった氏12:49:48・ガボ殴る(**本来の戦術**)](./lib/Party_Ketta1249.rb) | 11 | 83.14% | 20.21 | 0.95 | [Ketta1249GA_IronHelm_str4_mari11_1M.txt](./log/Ketta1249GA_IronHelm_str4_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴らない](./lib/Party_Drisnpi1250.rb) | 11 | 77.17% | 22.78 | 0.98 | [Drisnpi1250_IronHelm_str4_mari11_1M.txt](./log/Drisnpi1250_IronHelm_str4_mari11_1M.txt) |
+| [奴隷先輩氏12:50:02・ガボ殴る(**本来の戦術**)](./lib/Party_Drisnpi1250.rb) | 11 | 78.29% | 20.15 | 0.98 | [Drisnpi1250GA_IronHelm_str4_mari11_1M.txt](./log/Drisnpi1250GA_IronHelm_str4_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴らない](./lib/Party_SteelKasimuu.rb) | 11 | 85.11% | 22.72 | 0.86 | [SteelKasimuu_IronHelm_str4_mari11_1M.txt](./log/SteelKasimuu_IronHelm_str4_mari11_1M.txt) |
+| [steel氏カシムゥ！・ガボ殴る(**本来の戦術**)](./lib/Party_SteelKasimuu.rb) | 11 | 84.81% | 21.00 | 0.88 | [SteelKasimuuGA_IronHelm_str4_mari11_1M.txt](./log/SteelKasimuuGA_IronHelm_str4_mari11_1M.txt) |
+
+## 力種6
+
+### マリベルLv10
+
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 10 | 78.42% | 22.14 | 1.17 | [MariStone1_str6_mari10_1M.txt](./log/MariStone1_str6_mari10_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 10 | 78.15% | 22.00 | 1.10 | [MariStone2_str6_mari10_1M.txt](./log/MariStone2_str6_mari10_1M.txt) |
+
+### マリベルLv11
+
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 11 | 85.01% | 22.28 | 1.13 | [MariStone1_str6_mari11_1M.txt](./log/MariStone1_str6_mari11_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 11 | 85.16% | 22.16 | 1.06 | [MariStone2_str6_mari11_1M.txt](./log/MariStone2_str6_mari11_1M.txt) |
+
+### 主:鉄兜
+
+#### マリベルLv10
+
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 10 | 83.50% | 21.80 | 1.06 | [MariStone1_IronHelm_str6_mari10_1M.txt](./log/MariStone1_IronHelm_str6_mari10_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 10 | 82.73% | 21.70 | 1.01 | [MariStone2_IronHelm_str6_mari10_1M.txt](./log/MariStone2_IronHelm_str6_mari10_1M.txt) |
+
+#### マリベルLv11
+
+| 戦術 | マリベルLv | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [マリベル石#1](./lib/Party_MariStone1.rb) | 11 | 89.35% | 21.90 | 1.01 | [MariStone1_IronHelm_str6_mari11_1M.txt](./log/MariStone1_IronHelm_str6_mari11_1M.txt) |
+| [マリベル石#2](./lib/Party_MariStone2.rb) | 11 | 89.08% | 21.80 | 0.95 | [MariStone2_IronHelm_str6_mari11_1M.txt](./log/MariStone2_IronHelm_str6_mari11_1M.txt) |

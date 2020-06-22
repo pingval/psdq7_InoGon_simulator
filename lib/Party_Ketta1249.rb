@@ -13,7 +13,7 @@ def hero_Ketta1249(seed_type: :rand)
       agi: 0,
       eva: 0,
     },
-    seeds: { mhp: 2, mmp: 0, atk: 4, def: 2, agi: 0, },
+    seeds: { mhp: 2, mmp: 0, atk: 5, def: 2, agi: 0, },
     inventory: { Herb: 6, Leaf: 1 },
   )
 end

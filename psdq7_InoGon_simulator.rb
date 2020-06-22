@@ -318,7 +318,7 @@ OptionParser.new {|opt|
   }
   
   opt.banner = "Usage: #{File.basename(__FILE__, ".*")} options"
-  opt.version = "2020/06/14"
+  opt.version = "2020/06/22"
   
   opt.on("-n V", "--number NUMBER", Integer, "試行回数") {|v|
     $option[:N] = v
