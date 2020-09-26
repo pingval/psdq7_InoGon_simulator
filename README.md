@@ -29,6 +29,7 @@ PS版DQ7RTAにおいて最も勝率が低いとされている戦闘であるイ
   - [けった氏の12:49:48](./lib/Party_Ketta1249.rb)
   - [奴隷先輩氏の12:50:02](./lib/Party_Drisnpi1250.rb)
   - [steel氏のカシムゥ！](./lib/Party_SteelKasimuu.rb)
+  - [みるきぃ氏の12:38:48](./lib/Party_Milky1238.rb)
 
 ## 使い方
 
@@ -57,6 +58,8 @@ Usage: psdq7_InoGon_simulator options
                                      Drisnpi1250_GA      奴隷先輩氏12:50:02・ガボ殴る
                                      SteelKasimuu        steel氏カシムゥ！・ガボ殴らない
                                      SteelKasimuu_GA     steel氏カシムゥ！・ガボ殴る
+                                     Milky1238           みるきぃ氏12:38:48・ガボ殴らない
+                                     Milky1238_GA        みるきぃ氏12:38:48・ガボ殴る
     -m, --mari_lv11                  マリベルLv11
     -s, --seed_type SEED_TYPE        rand                種の上昇値ランダム(デフォルト)
                                      min                 最小値
@@ -69,6 +72,7 @@ e.g.
     psdq7_InoGon_simulator -pGaboStone1 -lturn
 ・けった氏12:49:48戦力(ガボ殴り)・種の上昇値平均・最も細かくログ出力:
     psdq7_InoGon_simulator -pKetta1249_GA -save -lresult
+
 ```
 
 - [シミュレーション結果](results.md)
@@ -558,3 +562,4 @@ Lose!: [死 ]イノ  0/440 |      ゴン 18/400 | [死 ]マ  0/ 53 | [死 ]主  
 - [x] カシムHP自動回復
 - [x] ステータス出力
 - [x] 戦闘終了時のアイテム出力
+- [x] みるきぃ1238

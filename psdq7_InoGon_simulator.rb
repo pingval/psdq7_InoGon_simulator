@@ -33,8 +33,9 @@ Lib_Require_Order = %w[
   Party_GaboStone3
   Party_GaboStone4
   Party_Ketta1249
-  Party_SteelKasimuu
   Party_Drisnpi1250
+  Party_SteelKasimuu
+  Party_Milky1238
 ]
 
 RGSS3_Require_Order.each{|basename|
@@ -315,6 +316,8 @@ OptionParser.new {|opt|
     Drisnpi1250_GA: "奴隷先輩氏12:50:02・ガボ殴る",
     SteelKasimuu: "steel氏カシムゥ！・ガボ殴らない",
     SteelKasimuu_GA: "steel氏カシムゥ！・ガボ殴る",
+    Milky1238: "みるきぃ氏12:38:48・ガボ殴らない",
+    Milky1238_GA: "みるきぃ氏12:38:48・ガボ殴る",
   }
   
   opt.banner = "Usage: #{File.basename(__FILE__, ".*")} options"
