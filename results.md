@@ -26,6 +26,7 @@
     - [マリベルLv10](#マリベルlv10-3)
     - [マリベルLv11](#マリベルlv11-3)
     - [主:鉄兜](#主鉄兜-2)
+  - [四精霊撃破RTAの場合](#四精霊撃破rtaの場合)
 
 <!-- /TOC -->
 
@@ -369,7 +370,7 @@
 | 隊列 | キャラ | Lv | 武 | 鎧 | 盾 | 兜 | 飾 | 命実 | 不実 | 力種 | 守種 | 早種 | HP | MP | Atk | Def | Agi | 薬草 | 世葉 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | マ | 10 | - | 身服(28) | シト(15) | 兎耳(15) | 祈輪(5) | 2 | 1 | 0 | 3 | 0 | 57 | 39 | 13 | 77 | 30 | 8 | 0 |
-| 2 | 主 | 10 | 刃ブ(26) | 鉄胸(26) | 鉄盾(13) | 貝帽(8) | - | 2 | 0 | 5 | 2 | 0 | 81 | 29 | 61 | 63 | 18 | 7 | 1 |
+| 2 | 主 | 10 | 刃ブ(26) | 派服(28) | 鉄盾(13) | 貝帽(8) | - | 2 | 0 | 5 | 2 | 0 | 81 | 29 | 61 | 63 | 18 | 7 | 1 |
 | 3 | ガ | 4 | 刃ブ(26) | 毛マ(18) | - | 尖帽(5) | - | 0 | 0 | 0 | 0 | 4 | 59 | 0 | 52 | 36 | 44 | 石 | 1 |
 
 ```
@@ -594,3 +595,47 @@
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | [マリベル石#1](./lib/Party_MariStone1.rb) | 11 | 89.35% | 21.90 | 1.01 | [MariStone1_IronHelm_str6_mari11_1M.txt](./log/MariStone1_IronHelm_str6_mari11_1M.txt) |
 | [マリベル石#2](./lib/Party_MariStone2.rb) | 11 | 89.08% | 21.80 | 0.95 | [MariStone2_IronHelm_str6_mari11_1M.txt](./log/MariStone2_IronHelm_str6_mari11_1M.txt) |
+
+## 四精霊撃破RTAの場合
+
+基本戦力(マリベルLv11・ガボ殴り)
+
+| 隊列 | キャラ | Lv | 武 | 鎧 | 盾 | 兜 | 飾 | 力種 | 早種 | 薬草 | 世葉 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | マ | 11 | 毒刀(23) | 身服(28) | シト(15) | 兎耳(15) | ? | 1 | 0 | 3 | 0
+| 2 | 主 | 10 | 刃ブ(26) | 派服(28) | 鉄盾(13) | 貝帽(8) | スピ(Atk1) | 7 | 0 |
+| 3 | ガ | 4 | 刃ブ(26) | 毛マ(18) | キ盾(9) | 毛フ(11) | ? |  0 | 5 |
+
+
+| 命実配分 | 守種配分 | 祈輪装備キャラ | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| マ1主3ガ1 | マ2主4ガ0 | マ | 85.23% | 18.29 | 0.78 | [FourSpiritsGaboStone1_mhp311_def420_MariPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp311_def420_MariPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主4ガ0 | 主 | 85.58% | 18.46 | 0.77 | [FourSpiritsGaboStone1_mhp311_def420_HeroPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp311_def420_HeroPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主4ガ0 | ガ | 87.65% | 18.40 | 0.75 | [FourSpiritsGaboStone1_mhp311_def420_GaboPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp311_def420_GaboPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主2ガ2 | マ | 86.12% | 18.38 | 0.77 | [FourSpiritsGaboStone1_mhp311_def222_MariPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp311_def222_MariPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主2ガ2 | 主 | 86.40% | 18.52 | 0.77 | [FourSpiritsGaboStone1_mhp311_def222_HeroPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp311_def222_HeroPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主2ガ2 | ガ | 87.70% | 18.51 | 0.76 | [FourSpiritsGaboStone1_mhp311_def222_GaboPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp311_def222_GaboPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主4ガ0 | マ | 86.90% | 18.37 | 0.77 | [FourSpiritsGaboStone1_mhp221_def420_MariPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp221_def420_MariPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主4ガ0 | 主 | 87.11% | 18.53 | 0.76 | [FourSpiritsGaboStone1_mhp221_def420_HeroPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp221_def420_HeroPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主4ガ0 | ガ | 89.25% | 18.51 | 0.73 | [FourSpiritsGaboStone1_mhp221_def420_GaboPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp221_def420_GaboPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主2ガ2 | マ | 87.96% | 18.46 | 0.76 | [FourSpiritsGaboStone1_mhp221_def222_MariPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp221_def222_MariPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主2ガ2 | 主 | 88.12% | 18.62 | 0.75 | [FourSpiritsGaboStone1_mhp221_def222_HeroPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp221_def222_HeroPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主2ガ2 | ガ | 89.15% | 18.58 | 0.74 | [FourSpiritsGaboStone1_mhp221_def222_GaboPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp221_def222_GaboPray_GA_mari11_1M.txt) |
+
+ガ:身服、マ:毛フの場合
+
+| 命実配分 | 守種配分 | 祈輪装備キャラ | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| マ1主3ガ1 | マ2主4ガ0 | マ | 88.91% | 18.69 | 0.79 | [FourSpiritsGaboStone2_mhp311_def420_MariPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp311_def420_MariPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主4ガ0 | 主 | 88.67% | 18.90 | 0.82 | [FourSpiritsGaboStone2_mhp311_def420_HeroPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp311_def420_HeroPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主4ガ0 | ガ | 89.22% | 18.88 | 0.83 | [FourSpiritsGaboStone2_mhp311_def420_GaboPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp311_def420_GaboPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主2ガ2 | マ | 89.37% | 18.80 | 0.79 | [FourSpiritsGaboStone2_mhp311_def222_MariPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp311_def222_MariPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主2ガ2 | 主 | 89.03% | 19.00 | 0.83 | [FourSpiritsGaboStone2_mhp311_def222_HeroPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp311_def222_HeroPray_GA_mari11_1M.txt) |
+| マ1主3ガ1 | マ2主2ガ2 | ガ | 89.07% | 18.99 | 0.84 | [FourSpiritsGaboStone2_mhp311_def222_GaboPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp311_def222_GaboPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主4ガ0 | マ | 89.89% | 18.79 | 0.78 | [FourSpiritsGaboStone2_mhp221_def420_MariPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp221_def420_MariPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主4ガ0 | 主 | 89.52% | 19.00 | 0.82 | [FourSpiritsGaboStone2_mhp221_def420_HeroPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp221_def420_HeroPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主4ガ0 | ガ | 89.84% | 18.97 | 0.83 | [FourSpiritsGaboStone2_mhp221_def420_GaboPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp221_def420_GaboPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主2ガ2 | マ | 89.73% | 18.88 | 0.79 | [FourSpiritsGaboStone2_mhp221_def222_MariPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp221_def222_MariPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主2ガ2 | 主 | 89.26% | 19.09 | 0.84 | [FourSpiritsGaboStone2_mhp221_def222_HeroPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp221_def222_HeroPray_GA_mari11_1M.txt) |
+| マ1主2ガ2 | マ2主2ガ2 | ガ | 89.43% | 19.07 | 0.85 | [FourSpiritsGaboStone2_mhp221_def222_GaboPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp221_def222_GaboPray_GA_mari11_1M.txt) |
+
