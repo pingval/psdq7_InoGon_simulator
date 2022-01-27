@@ -20,16 +20,24 @@ PS版DQ7RTAにおいて最も勝率が低いとされている戦闘であるイ
   - [自分の戦術](./lib/Party_Pingval.rb)
   - [自分の石役ガボ殴り戦術](./lib/Party_Pingval_GaboAttack.rb)
 - 戦力
-  - [マリベル石#1](./lib/Party_MariStone1.rb)
-  - [マリベル石#2](./lib/Party_MariStone2.rb)
-  - [ガボ石#1](./lib/Party_GaboStone1.rb)
-  - [ガボ石#2](./lib/Party_GaboStone2.rb)
-  - [ガボ石#3](./lib/Party_GaboStone3.rb)
-  - [ガボ石#4](./lib/Party_GaboStone4.rb)
-  - [けった氏の12:49:48](./lib/Party_Ketta1249.rb)
-  - [奴隷先輩氏の12:50:02](./lib/Party_Drisnpi1250.rb)
-  - [steel氏のカシムゥ！](./lib/Party_SteelKasimuu.rb)
-  - [みるきぃ氏の12:38:48](./lib/Party_Milky1238.rb)
+  - 通常RTA
+    - [マリベル石#1](./lib/Party_MariStone1.rb)
+    - [マリベル石#2](./lib/Party_MariStone2.rb)
+    - [ガボ石#1](./lib/Party_GaboStone1.rb)
+    - [ガボ石#2](./lib/Party_GaboStone2.rb)
+    - [ガボ石#3](./lib/Party_GaboStone3.rb)
+    - [ガボ石#4](./lib/Party_GaboStone4.rb)
+    - [けった氏の12:49:48](./lib/Party_Ketta1249.rb)
+    - [奴隷先輩氏の12:50:02](./lib/Party_Drisnpi1250.rb)
+    - [steel氏のカシムゥ！](./lib/Party_SteelKasimuu.rb)
+    - [みるきぃ氏の12:38:48](./lib/Party_Milky1238.rb)
+  - 神様＆四精霊撃破RTA
+    - [ping値の16:14:03](./lib/Party_FourSpiritsPingval1614.rb)
+    - [Rou氏の16:09:13](./lib/Party_FourSpiritsRou1609.rb)
+    - [マリベル石#1](./lib/Party_FourSpiritsMariStone1.rb)
+    - [マリベル石#2](./lib/Party_FourSpiritsMariStone2.rb)
+    - [ガボ石#1](./lib/Party_FourSpiritsGaboStone1.rb)
+    - [ガボ石#2](./lib/Party_FourSpiritsGaboStone2.rb)
 
 ## 使い方
 
@@ -60,6 +68,14 @@ Usage: psdq7_InoGon_simulator options
                                      SteelKasimuu_GA     steel氏カシムゥ！・ガボ殴る
                                      Milky1238           みるきぃ氏12:38:48・ガボ殴らない
                                      Milky1238_GA        みるきぃ氏12:38:48・ガボ殴る
+                                     FourSpiritsPingval1614四精霊ping値16:14:03
+                                     FourSpiritsRou1609  四精霊Rou氏16:09:13・ガボ殴らない
+                                     FourSpiritsRou1609_GA四精霊Rou氏16:09:13・ガボ殴る
+                                     FourSpiritsGaboStone1四精霊ガボ石#1・ガボ殴らない
+                                     FourSpiritsGaboStone1_GA四精霊ガボ石#1・ガボ殴る
+                                     FourSpiritsGaboStone2四精霊ガボ石#2・ガボ殴らない
+                                     FourSpiritsMariStone1四精霊マリベル#1
+                                     FourSpiritsMariStone2四精霊マリベル#2
     -m, --mari_lv11                  マリベルLv11
     -s, --seed_type SEED_TYPE        rand                種の上昇値ランダム(デフォルト)
                                      min                 最小値
