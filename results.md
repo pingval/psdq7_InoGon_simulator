@@ -28,9 +28,7 @@
     - [主:鉄兜](#主鉄兜-2)
   - [四精霊撃破RTAの場合](#四精霊撃破rtaの場合)
     - [ガボ石](#ガボ石)
-    - [主:鉄兜](#主鉄兜-3)
     - [マリベル石](#マリベル石)
-    - [主:鉄兜](#主鉄兜-4)
 
 <!-- /TOC -->
 
@@ -644,7 +642,7 @@
 | 主2マ1ガ2 | 主2マ2ガ2 | マ | 89.73% | 18.88 | 0.79 | [FourSpiritsGaboStone2_mhp212_def222_MariPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp212_def222_MariPray_GA_mari11_1M.txt) |
 | 主2マ1ガ2 | 主2マ2ガ2 | ガ | 89.43% | 19.07 | 0.85 | [FourSpiritsGaboStone2_mhp212_def222_GaboPray_GA_mari11_1M.txt](./log/FourSpiritsGaboStone2_mhp212_def222_GaboPray_GA_mari11_1M.txt) |
 
-### 主:鉄兜
+#### 主:鉄兜
 
 | 命実配分 | 守種配分 | 祈輪装備キャラ | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -661,7 +659,7 @@
 | 主2マ1ガ2 | 主2マ2ガ2 | マ | 89.91% | 18.22 | 0.70 | [FourSpiritsGaboStone1_mhp212_def222_MariPray_GA_IronHelm_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp212_def222_MariPray_GA_IronHelm_mari11_1M.txt) |
 | 主2マ1ガ2 | 主2マ2ガ2 | ガ | 91.05% | 18.33 | 0.68 | [FourSpiritsGaboStone1_mhp212_def222_GaboPray_GA_IronHelm_mari11_1M.txt](./log/FourSpiritsGaboStone1_mhp212_def222_GaboPray_GA_IronHelm_mari11_1M.txt) |
 
-#### ガ:身服、マ:毛フ
+##### ガ:身服、マ:毛フ
 
 | 命実配分 | 守種配分 | 祈輪装備キャラ | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -720,7 +718,7 @@
 | 主3マ2ガ0 | 主2マ2ガ2 | マ | 88.67% | 21.32 | 0.83 | [FourSpiritsMariStone2_mhp320_def222_MariPray_mari11_1M.txt](./log/FourSpiritsMariStone2_mhp320_def222_MariPray_mari11_1M.txt) |
 | 主3マ2ガ0 | 主2マ2ガ2 | ガ | 88.22% | 21.21 | 0.81 | [FourSpiritsMariStone2_mhp320_def222_GaboPray_mari11_1M.txt](./log/FourSpiritsMariStone2_mhp320_def222_GaboPray_mari11_1M.txt) |
 
-### 主:鉄兜
+#### 主:鉄兜
 
 | 命実配分 | 守種配分 | 祈輪装備キャラ | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -737,7 +735,7 @@
 | 主3マ2ガ0 | 主2マ2ガ2 | マ | 91.49% | 21.27 | 0.90 | [FourSpiritsMariStone1_mhp320_def222_MariPray_IronHelm_mari11_1M.txt](./log/FourSpiritsMariStone1_mhp320_def222_MariPray_IronHelm_mari11_1M.txt) |
 | 主3マ2ガ0 | 主2マ2ガ2 | ガ | 91.09% | 21.20 | 0.86 | [FourSpiritsMariStone1_mhp320_def222_GaboPray_IronHelm_mari11_1M.txt](./log/FourSpiritsMariStone1_mhp320_def222_GaboPray_IronHelm_mari11_1M.txt) |
 
-#### ガ:身服、マ:毛フ
+##### ガ:身服、マ:毛フ
 
 守種配分 | | 命実配分 | 祈輪装備キャラ | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
