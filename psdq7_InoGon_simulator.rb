@@ -36,6 +36,13 @@ Lib_Require_Order = %w[
   Party_Drisnpi1250
   Party_SteelKasimuu
   Party_Milky1238
+
+  Party_FourSpiritsPingval1614
+  Party_FourSpiritsRou1609
+  Party_FourSpiritsGaboStone1
+  Party_FourSpiritsGaboStone2
+  Party_FourSpiritsMariStone1
+  Party_FourSpiritsMariStone2
 ]
 
 RGSS3_Require_Order.each{|basename|
@@ -318,10 +325,19 @@ OptionParser.new {|opt|
     SteelKasimuu_GA: "steel氏カシムゥ！・ガボ殴る",
     Milky1238: "みるきぃ氏12:38:48・ガボ殴らない",
     Milky1238_GA: "みるきぃ氏12:38:48・ガボ殴る",
+
+    FourSpiritsPingval1614: "四精霊ping値16:14:03",
+    FourSpiritsRou1609: "四精霊Rou氏16:09:13・ガボ殴らない",
+    FourSpiritsRou1609_GA: "四精霊Rou氏16:09:13・ガボ殴る",
+    FourSpiritsGaboStone1: "四精霊ガボ石#1・ガボ殴らない",
+    FourSpiritsGaboStone1_GA: "四精霊ガボ石#1・ガボ殴る",
+    FourSpiritsGaboStone2: "四精霊ガボ石#2・ガボ殴らない",
+    FourSpiritsMariStone1: "四精霊マリベル#1",
+    FourSpiritsMariStone2: "四精霊マリベル#2",
   }
   
   opt.banner = "Usage: #{File.basename(__FILE__, ".*")} options"
-  opt.version = "2020/06/22"
+  opt.version = "2021/01/24"
   
   opt.on("-n V", "--number NUMBER", Integer, "試行回数") {|v|
     $option[:N] = v
