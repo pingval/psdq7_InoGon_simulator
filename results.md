@@ -737,7 +737,7 @@
 
 ##### ガ:身服、マ:毛フ
 
-守種配分 | | 命実配分 | 祈輪装備キャラ | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
+| 命実配分 | 守種配分 | 祈輪装備キャラ | 勝率 | 勝利時平均ターン数 | 勝利時平均世葉消費数 | ログ |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 主3マ1ガ1 | 主4マ2ガ0 | 主 | 90.11% | 20.95 | 0.72 | [FourSpiritsMariStone2_mhp311_def420_HeroPray_IronHelm_mari11_1M.txt](./log/FourSpiritsMariStone2_mhp311_def420_HeroPray_IronHelm_mari11_1M.txt) |
 | 主3マ1ガ1 | 主4マ2ガ0 | マ | 90.62% | 20.92 | 0.74 | [FourSpiritsMariStone2_mhp311_def420_MariPray_IronHelm_mari11_1M.txt](./log/FourSpiritsMariStone2_mhp311_def420_MariPray_IronHelm_mari11_1M.txt) |
